@@ -19,7 +19,8 @@ Build and test the full pipeline locally using input.csv as the data source.
 - Rows with empty Házszámok are skipped
 - Output includes Oldal column (páratlan/páros) carried over from input
 - Output sorted by Település → Utca → Oldal (páratlan first) → Házszám (numerically)
-- Roman numeral street names (e.g. "III. utca") sort numerically among themselves
+- Sorting respects Hungarian alphabet (Á after A, É after E, digraphs CS/SZ/GY etc.)
+- Roman numeral street names (e.g. "III. utca") sort numerically before alphabetical streets
 
 Input:  input.csv
 Output: address_list.csv (the expanded address list — becomes a Google Sheet in Phase 2)

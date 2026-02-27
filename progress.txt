@@ -64,7 +64,9 @@ Columns: Település (city), Utca (street), Oldal (side: páratlan=odd / páros=
 - Output: address_list.csv with 618 unique addresses
 - Columns: Település, Utca, Oldal, Házszám, Teljes cím, Megjegyzés
 - Sorted: Település → Utca → Oldal (páratlan first) → Házszám (numerically)
-- Roman numeral streets (e.g. "III. utca") sort by numeric value, not alphabetically
+- Roman numeral streets (e.g. "III. utca") sort by numeric value, before alphabetical streets
+- Hungarian alphabetical order: Á after A (not after Z), É after E, Ö/Ő after O, Ü/Ű after U
+- Digraphs (CS, DZ, DZS, GY, LY, NY, SZ, TY, ZS) treated as single letters per Hungarian rules
 - This CSV will become a user-viewable Google Sheet in Phase 2
 
 ### Geocoding cache: geocoded_cache.json
@@ -166,6 +168,7 @@ Map updates only when all chunks are done.
 - [x] Sorted output: address_list.csv sorted by city → street → oldal → house number
 - [x] Oldal column included in address_list.csv (páratlan/páros kept separate)
 - [x] Roman numeral street names (e.g. "III. utca") sort numerically
+- [x] Hungarian alphabetical order (Á after A, É after E, digraphs CS/SZ/GY as single letters)
 - [x] XSS fix: popups use textContent instead of innerHTML
 - [x] Error handling: generate_map.py checks for missing/empty cache file
 - [x] Error handling: geocode.py checks for missing address_list.csv
@@ -217,6 +220,10 @@ Map updates only when all chunks are done.
   House numbers also sort numerically (1, 2, 3, ... not 1, 10, 11, 2, ...).
 - **FEATURE**: Oldal column added to address_list.csv output. Sort groups
   páratlan (odd) and páros (even) separately within each street.
+- **FEATURE**: Hungarian alphabetical sorting — accented vowels (Á, É, Í, Ó, Ö, Ő, Ú, Ü, Ű)
+  sort in their correct positions (e.g. Á after A, before B) and digraphs (CS, SZ, GY, etc.)
+  are treated as single letters. Roman numeral streets sort as a separate numeric group
+  before alphabetical entries.
 
 ---
 
