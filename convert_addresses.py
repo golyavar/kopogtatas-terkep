@@ -33,6 +33,44 @@ def expand_numbers(házszámok_str, oldal=None):
     return results
 
 
+# Hungarian alphabet order (digraphs are single letters in Hungarian).
+# Each entry maps to a sort key that preserves correct order.
+_HU_ORDER = [
+    'a', 'á', 'b', 'c', 'cs', 'd', 'dz', 'dzs', 'e', 'é',
+    'f', 'g', 'gy', 'h', 'i', 'í', 'j', 'k', 'l', 'ly',
+    'm', 'n', 'ny', 'o', 'ó', 'ö', 'ő', 'p', 'q', 'r',
+    's', 'sz', 't', 'ty', 'u', 'ú', 'ü', 'ű', 'v', 'w',
+    'x', 'y', 'z', 'zs',
+]
+_HU_MAP = {ch: f"{i:02d}" for i, ch in enumerate(_HU_ORDER)}
+
+
+def hungarian_sort_key(s):
+    """Convert a string to a sort key respecting Hungarian alphabetical order."""
+    result = []
+    i = 0
+    low = s.lower()
+    while i < len(low):
+        matched = False
+        # Try 3-char then 2-char digraphs first (dzs before dz, sz before s, etc.)
+        for length in (3, 2):
+            chunk = low[i:i+length]
+            if chunk in _HU_MAP:
+                result.append(_HU_MAP[chunk])
+                i += length
+                matched = True
+                break
+        if not matched:
+            ch = low[i]
+            if ch in _HU_MAP:
+                result.append(_HU_MAP[ch])
+            else:
+                # Non-letter characters (spaces, digits, punctuation) sort by ordinal
+                result.append(ch)
+            i += 1
+    return ''.join(result)
+
+
 ROMAN_VALUES = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
 
 
@@ -55,11 +93,21 @@ def roman_to_int(s):
 def sort_key(row):
     """Sort by Település, then Utca (with Roman numerals as numbers), then Házszám numerically."""
     utca = row["Utca"]
-    # Replace Roman numeral tokens with their numeric value for sorting.
-    # Handles both "III. utca" and "Pincesor III." patterns.
-    def replace_roman(m):
-        return str(roman_to_int(m.group(1))).zfill(4)
-    utca_sort = re.sub(r'\b([IVXLCDM]+)\.', replace_roman, utca)
+
+    # Separate Roman numeral handling from Hungarian letter sorting.
+    # Roman numeral streets sort before alphabetical streets (tuple prefix 0 vs 1).
+    m = re.match(r'^([IVXLCDM]+)\.\s*(.*)', utca)
+    if m:
+        # Prefix pattern: "III. utca" → sort by numeric value, then suffix
+        utca_key = (0, roman_to_int(m.group(1)), hungarian_sort_key(m.group(2) or ''))
+    else:
+        m2 = re.search(r'\b([IVXLCDM]+)\.$', utca)
+        if m2:
+            # Suffix pattern: "Pincesor III." → sort by prefix, then numeric value
+            prefix = utca[:m2.start()].strip()
+            utca_key = (1, hungarian_sort_key(prefix), roman_to_int(m2.group(1)))
+        else:
+            utca_key = (1, hungarian_sort_key(utca), 0)
 
     # Sort house number numerically (non-numeric like "2A" sorts after pure numbers)
     házszám = row["Házszám"]
@@ -69,7 +117,8 @@ def sort_key(row):
     # páratlan (odd) sorts before páros (even)
     oldal_order = 0 if row.get("Oldal") == "páratlan" else 1
 
-    return (row["Település"], utca_sort, oldal_order, házszám_num, házszám)
+    return (hungarian_sort_key(row["Település"]), utca_key,
+            oldal_order, házszám_num, házszám)
 
 
 def expand_addresses(input_file, output_file):
