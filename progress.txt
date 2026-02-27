@@ -1,0 +1,232 @@
+# Project: Kopogtatas Terkep (Knocking Map)
+
+## Goal
+Visualize all addresses from a Google Sheet on an interactive map, delivered as
+a single shareable link that a non-technical person can click to view.
+The map auto-updates whenever the input Google Sheet is edited.
+
+---
+
+## Architecture — 3-step pipeline
+
+```
+input.csv
+    │
+    ▼
+[convert_addresses.py]  ← Step 1: expand ranges, filter by Oldal (odd/even)
+    │
+    ▼
+address_list.csv        ← 618 unique expanded addresses (becomes a Google Sheet in Phase 2)
+    │
+    ▼
+[geocode.py]            ← Step 2: geocode via Nominatim, build cache
+    │
+    ▼
+geocoded_cache.json     ← persistent lat/lon cache
+    │
+    ▼
+[generate_map.py]       ← Step 3: embed pins into self-contained HTML
+    │
+    ▼
+index.html              ← interactive Leaflet map
+```
+
+Run order locally:
+```
+python convert_addresses.py
+python geocode.py
+python generate_map.py
+```
+
+First geocode run: ~10 minutes (618 addresses at 1 req/sec).
+Subsequent runs: seconds (only new/changed addresses geocoded).
+
+---
+
+## Data
+
+### Input: input.csv
+Columns: Település (city), Utca (street), Oldal (side: páratlan=odd / páros=even),
+         Házszámok (house numbers — may be ranges like "1-13, 17" or empty),
+         Megjegyzés (notes — currently all empty)
+
+- 1,906 total rows across 58 cities in Tolna county (Hungary)
+- Only 55 rows have house numbers; the other 1,851 are streets without specific
+  house data and are intentionally skipped
+- Cities include: Dombóvár (primary), Bonyhád, Hőgyész, Zomba, Alsónána, and 53 others
+
+### Address expansion (convert_addresses.py)
+- Ranges like "1-13" are expanded to individual house numbers
+- The Oldal column filters which numbers are kept:
+  - páratlan → only odd numbers (1, 3, 5, 7, 9, 11, 13)
+  - páros → only even numbers (2, 4, 6, 8, ...)
+  - Non-numeric entries (e.g. "2A") are always kept
+- Output: address_list.csv with 618 unique addresses
+- Columns: Település, Utca, Oldal, Házszám, Teljes cím, Megjegyzés
+- Sorted: Település → Utca → Oldal (páratlan first) → Házszám (numerically)
+- Roman numeral streets (e.g. "III. utca") sort by numeric value, not alphabetically
+- This CSV will become a user-viewable Google Sheet in Phase 2
+
+### Geocoding cache: geocoded_cache.json
+- Keyed by full address string (e.g. "Ady Endre utca 1, Dombóvár, Hungary")
+- Value: { "lat": float, "lon": float }
+- Saved after each geocode call (crash-safe)
+- Never re-geocodes an address already in the cache
+
+### Output: index.html
+- Single self-contained HTML file
+- All map data embedded as a JS array (no runtime API calls)
+- Popup text uses textContent (safe against XSS)
+- Initial view centered on Dombóvár (46.37°N, 18.14°E, zoom 12)
+
+---
+
+## Map spec
+
+- Library: Leaflet.js 1.9.4 + MarkerCluster 1.5.3 (both from unpkg CDN)
+- Tiles: OpenStreetMap (no API key needed)
+- Clustering: yes — pins cluster when zoomed out
+- Pin popup: full address as plain text
+- Geocoding API: Nominatim (free, no key, called only at build time)
+  - Rate limit: 1 req/sec (enforced with time.sleep)
+  - User-Agent: "kopogtatas-terkep/1.0"
+- Center: fixed at Dombóvár (46.37°N, 18.14°E, zoom 12) — user decision,
+  this is the most widely viewed area
+
+---
+
+## Key design decisions
+
+- **Oldal filtering**: The Oldal (side) column must be respected. páratlan rows
+  yield only odd house numbers, páros rows yield only even. Without this, the
+  pipeline produces 1,151 addresses (with 392 duplicates) instead of 618 unique.
+
+- **address_list.csv as intermediate artifact**: convert_addresses.py produces
+  a human-readable CSV that serves as the source of truth for geocoding. In Phase 2
+  this will be a separate Google Sheet that users can view and verify.
+
+- **Map center stays on Dombóvár**: Even though data spans 58 cities, Dombóvár
+  is the primary area of interest. Users zoom/pan to other areas manually.
+
+- **Empty streets are skipped**: 1,851 rows without house numbers represent entire
+  streets. These are intentionally not geocoded or shown on the map.
+
+- **XSS protection in popups**: Address text is set via textContent (not innerHTML)
+  to prevent injection if address data ever contains HTML characters.
+
+---
+
+## Cloud workflow (Phase 2 — backlog, do not build yet)
+
+### Stack
+- Trigger: Google Apps Script bound to the Google Sheet (onEdit / onChange)
+- address_list.csv → becomes a separate Google Sheet (user-viewable)
+- Geocoding cache: geocoded_cache.json stored on Google Drive
+- Output: index.html written to Google Drive (public share link)
+- No external server needed — everything in Google's ecosystem
+
+### Chunked geocoding (handles 100s of new addresses without timeout)
+Apps Script has a 6-minute execution limit per run. Solution:
+
+1. onEdit fires → compare sheet data to cache → build list of pending addresses
+2. Save pending list + progress to Apps Script PropertiesService
+3. Geocode a chunk (~50 addresses, ~50 sec)
+4. Save updated cache to Drive
+5. Schedule a 1-minute time-based trigger to continue
+6. Next run: load progress, geocode next chunk, repeat
+7. Final chunk: regenerate index.html → write to Drive → delete trigger → clear state
+
+Edge case: if sheet is edited again mid-process, merge new pending addresses
+into the existing queue (don't restart).
+
+Result: 500 new addresses ≈ 10 chunks ≈ ~10 min total, spread across runs.
+Map updates only when all chunks are done.
+
+### Hosting
+- Google Drive public share link works for basic viewing of HTML files
+- Alternative: GitHub Pages (simpler, more reliable for HTML rendering)
+- TBD based on what's easiest for the user's setup
+
+---
+
+## Progress
+
+### DONE
+- [x] Read and understand spec.md
+- [x] Read existing convert_addresses.py
+- [x] Clarified all requirements with user
+- [x] Designed local and cloud architecture
+- [x] Write geocode.py (Nominatim + cache)
+- [x] Write generate_map.py (Leaflet HTML generator)
+- [x] BUG FIX: Oldal column filtering (páratlan/páros → odd/even)
+- [x] REFACTOR: 3-step pipeline (convert_addresses.py → geocode.py → generate_map.py)
+- [x] convert_addresses.py is the single source of truth for range expansion
+- [x] geocode.py reads address_list.csv (no longer duplicates expand logic)
+- [x] Deduplication in geocode.py (prevents wasted Nominatim calls)
+- [x] Sorted output: address_list.csv sorted by city → street → oldal → house number
+- [x] Oldal column included in address_list.csv (páratlan/páros kept separate)
+- [x] Roman numeral street names (e.g. "III. utca") sort numerically
+- [x] XSS fix: popups use textContent instead of innerHTML
+- [x] Error handling: generate_map.py checks for missing/empty cache file
+- [x] Error handling: geocode.py checks for missing address_list.csv
+- [x] Updated spec.md to match new architecture
+- [x] Updated progress.txt (this file)
+
+### TODO — Phase 1 (local)
+- [ ] Run full pipeline end-to-end (convert → geocode → generate)
+- [ ] Run initial geocoding (~10 min first run, 618 addresses)
+- [ ] Verify map looks correct (pins in right locations, clustering works)
+- [ ] Check how many addresses Nominatim fails to resolve
+
+### TODO — Phase 2 (cloud, backlog)
+- [ ] Port convert_addresses logic to Google Apps Script
+- [ ] Set up address_list as a separate Google Sheet
+- [ ] Implement chunked geocoding with PropertiesService + time triggers
+- [ ] Implement cache read/write on Google Drive
+- [ ] Implement HTML regeneration + Drive publish
+- [ ] Test end-to-end cloud update flow
+- [ ] Finalize hosting / public share link
+
+---
+
+## Changelog
+
+### 2026-02-27 — Opus review & bug fixes
+- **BUG FIX (critical)**: Oldal column was completely ignored during range expansion.
+  expand_numbers() now takes an `oldal` parameter and filters odd/even accordingly.
+  Address count dropped from 1,151 (with 392 duplicates) to 618 unique.
+- **REFACTOR**: Pipeline changed from 2-step to 3-step:
+  - Before: geocode.py (expand+geocode) → generate_map.py
+  - After:  convert_addresses.py (expand) → geocode.py (geocode) → generate_map.py
+- **REFACTOR**: geocode.py no longer duplicates expand_numbers logic. It reads
+  address_list.csv produced by convert_addresses.py.
+- **FIX**: Default filenames in convert_addresses.py changed from
+  "kopogtatas-lista.csv"/"kopogtatas_cimek.csv" to "input.csv"/"address_list.csv".
+- **FIX**: Deduplication added to geocode.py's load_addresses() to prevent
+  wasted Nominatim API calls on duplicate address strings.
+- **FIX**: XSS protection — generate_map.py popups now use textContent
+  instead of innerHTML via bindPopup.
+- **FIX**: generate_map.py now exits with a clear error if geocoded_cache.json
+  is missing or empty, instead of crashing with an unhandled exception.
+- **FIX**: geocode.py now exits with a clear error if address_list.csv is missing.
+- **DOCS**: spec.md updated to reflect 3-step pipeline, Oldal filtering rules,
+  correct address count (618), and file descriptions.
+- **FEATURE**: address_list.csv output is now sorted by Település → Utca → Házszám.
+  Roman numeral street names (e.g. "III. utca", "Pincesor II.") sort numerically
+  among themselves (I < II < III < ... < XIV), not lexicographically.
+  House numbers also sort numerically (1, 2, 3, ... not 1, 10, 11, 2, ...).
+- **FEATURE**: Oldal column added to address_list.csv output. Sort groups
+  páratlan (odd) and páros (even) separately within each street.
+
+---
+
+## Files in this repo
+- input.csv             — source address data (1,906 rows, 58 cities)
+- convert_addresses.py  — Step 1: expand ranges + Oldal filter → address_list.csv
+- address_list.csv      — 618 expanded addresses (becomes a Google Sheet in Phase 2)
+- geocode.py            — Step 2: read address_list.csv → geocode → geocoded_cache.json
+- geocoded_cache.json   — persistent geocoding cache (created on first geocode run)
+- generate_map.py       — Step 3: read cache → index.html
+- index.html            — output map (created by generate_map.py)
+- spec.md               — project specification
+- progress.txt          — this file
