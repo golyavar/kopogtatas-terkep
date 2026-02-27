@@ -1,5 +1,8 @@
 #!/bin/bash
 set -e
+if [ -f .env ]; then
+  export $(grep -v '^#' .env | xargs)
+fi
 echo "=== Step 1: Expanding addresses ==="
 python3 convert_addresses.py
 echo ""

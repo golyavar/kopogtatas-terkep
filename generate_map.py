@@ -4,10 +4,13 @@ import sys
 
 CACHE_FILE = "geocoded_cache.json"
 OUTPUT_HTML = "index.html"
+API_KEY = os.environ.get("GOOGLE_MAPS_API_KEY", "YOUR_API_KEY")
 
-MAP_CENTER_LAT = 46.37
-MAP_CENTER_LON = 18.14
-MAP_ZOOM = 12
+# Tighter bounding box for Dombóvár centre
+DOMBOVAR_SOUTH = 46.367
+DOMBOVAR_NORTH = 46.389
+DOMBOVAR_WEST = 18.119
+DOMBOVAR_EAST = 18.168
 
 
 def main():
@@ -35,36 +38,51 @@ def main():
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kopogtatás térkép</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
   <style>
     html, body, #map {{ height: 100%; margin: 0; padding: 0; }}
   </style>
 </head>
 <body>
   <div id="map"></div>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script>
-    var map = L.map('map').setView([{MAP_CENTER_LAT}, {MAP_CENTER_LON}], {MAP_ZOOM});
+    function initMap() {{
+      var bounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng({DOMBOVAR_SOUTH}, {DOMBOVAR_WEST}),
+        new google.maps.LatLng({DOMBOVAR_NORTH}, {DOMBOVAR_EAST})
+      );
 
-    L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }}).addTo(map);
+      var map = new google.maps.Map(document.getElementById('map'), {{
+        mapId: 'kopogtat_s_t_rk_p',
+      }});
+      map.fitBounds(bounds);
 
-    var pins = {pins_json};
+      var houseIcon = {{
+        path: 'M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z',
+        fillColor: '#1a237e',
+        fillOpacity: 1,
+        strokeColor: '#0d1442',
+        strokeWeight: 1,
+        scale: 1.2,
+        anchor: new google.maps.Point(12, 22),
+      }};
 
-    var markers = L.markerClusterGroup();
-    pins.forEach(function(pin) {{
-      var el = document.createElement('span');
-      el.textContent = pin.address;
-      L.marker([pin.lat, pin.lon])
-        .bindPopup(el)
-        .addTo(markers);
-    }});
-    map.addLayer(markers);
+      var pins = {pins_json};
+      var infoWindow = new google.maps.InfoWindow();
+
+      pins.forEach(function(pin) {{
+        var marker = new google.maps.Marker({{
+          position: {{ lat: pin.lat, lng: pin.lon }},
+          map: map,
+          icon: houseIcon,
+        }});
+        marker.addListener('click', function() {{
+          infoWindow.setContent(pin.address);
+          infoWindow.open(map, marker);
+        }});
+      }});
+    }}
   </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key={API_KEY}&callback=initMap" async defer></script>
 </body>
 </html>"""
 

@@ -2,14 +2,13 @@ import csv
 import json
 import os
 import sys
-import time
 import urllib.request
 import urllib.parse
 
 ADDRESS_LIST = "address_list.csv"
 CACHE_FILE = "geocoded_cache.json"
-NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
-USER_AGENT = "kopogtatas-terkep/1.0"
+GOOGLE_GEOCODE_URL = "https://maps.googleapis.com/maps/api/geocode/json"
+API_KEY = os.environ.get("GOOGLE_MAPS_API_KEY", "")
 
 
 def load_addresses(address_list_csv):
@@ -30,14 +29,18 @@ def load_addresses(address_list_csv):
 
 
 def geocode_address(address):
-    """Call Nominatim and return {lat, lon} or None if not found."""
-    params = urllib.parse.urlencode({"q": address, "format": "json", "limit": 1})
-    url = f"{NOMINATIM_URL}?{params}"
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    """Call Google Geocoding API and return {lat, lon} or None if not found."""
+    if not API_KEY:
+        print("Error: GOOGLE_MAPS_API_KEY not set.")
+        sys.exit(1)
+    params = urllib.parse.urlencode({"address": address, "key": API_KEY})
+    url = f"{GOOGLE_GEOCODE_URL}?{params}"
+    req = urllib.request.Request(url)
     with urllib.request.urlopen(req, timeout=10) as resp:
         data = json.loads(resp.read().decode())
-    if data:
-        return {"lat": float(data[0]["lat"]), "lon": float(data[0]["lon"])}
+    if data["status"] == "OK" and data["results"]:
+        loc = data["results"][0]["geometry"]["location"]
+        return {"lat": loc["lat"], "lon": loc["lng"]}
     return None
 
 
@@ -82,11 +85,10 @@ def main():
             print(f"ERROR: {e} (skipped)")
 
         save_cache(cache)
-        time.sleep(1)
 
     print(f"\nDone. {len(cache)} addresses in cache.")
     if skipped:
-        print(f"{len(skipped)} skipped (Nominatim could not resolve):")
+        print(f"{len(skipped)} skipped (Google could not resolve):")
         for addr in skipped:
             print(f"  - {addr}")
 
