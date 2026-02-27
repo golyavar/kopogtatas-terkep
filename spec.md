@@ -46,6 +46,10 @@ Output: index.html
 
 ### Run order
 ```
+./run.sh
+```
+or individually:
+```
 python convert_addresses.py
 python geocode.py
 python generate_map.py
@@ -116,5 +120,6 @@ Rows with empty Házszámok are skipped (these are streets without specific hous
 - geocoded_cache.json   — persistent geocoding cache (created by geocode.py)
 - generate_map.py       — Step 3: reads cache, produces index.html
 - index.html            — output map (created by generate_map.py)
+- run.sh                — runs all 3 steps in sequence
 - spec.md               — project specification (this file)
 - progress.txt          — detailed progress tracking, architecture notes, and changelog

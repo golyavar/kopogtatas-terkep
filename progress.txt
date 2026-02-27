@@ -33,6 +33,10 @@ index.html              ← interactive Leaflet map
 
 Run order locally:
 ```
+./run.sh
+```
+or individually:
+```
 python convert_addresses.py
 python geocode.py
 python generate_map.py
@@ -176,10 +180,10 @@ Map updates only when all chunks are done.
 - [x] Updated progress.txt (this file)
 
 ### TODO — Phase 1 (local)
-- [ ] Run full pipeline end-to-end (convert → geocode → generate)
-- [ ] Run initial geocoding (~10 min first run, 618 addresses)
+- [x] Run full pipeline end-to-end (convert → geocode → generate)
+- [x] Run initial geocoding (~10 min first run, 618 addresses)
+- [x] All 618/618 addresses resolved by Nominatim (0 failures)
 - [ ] Verify map looks correct (pins in right locations, clustering works)
-- [ ] Check how many addresses Nominatim fails to resolve
 
 ### TODO — Phase 2 (cloud, backlog)
 - [ ] Port convert_addresses logic to Google Apps Script
@@ -225,6 +229,11 @@ Map updates only when all chunks are done.
   are treated as single letters. Roman numeral streets sort as a separate numeric group
   before alphabetical entries.
 
+### 2026-02-27 — Pipeline run & run.sh
+- **RUN**: Full pipeline executed end-to-end. All 618/618 addresses geocoded successfully
+  (0 Nominatim failures). index.html generated with 618 pins.
+- **ADDED**: run.sh — convenience script to run all 3 pipeline steps in sequence.
+
 ---
 
 ## Files in this repo
@@ -235,5 +244,6 @@ Map updates only when all chunks are done.
 - geocoded_cache.json   — persistent geocoding cache (created on first geocode run)
 - generate_map.py       — Step 3: read cache → index.html
 - index.html            — output map (created by generate_map.py)
+- run.sh                — runs all 3 steps in sequence
 - spec.md               — project specification
 - progress.txt          — this file
