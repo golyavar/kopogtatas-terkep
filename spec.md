@@ -57,18 +57,57 @@ python generate_map.py
 
 ---
 
-## Phase 2 — Cloud (backlog, do not build yet)
+## Phase 2 — Cloud deployment (GitHub Actions + GitHub Pages)
 
-Once Phase 1 is tested and working, port to Google Apps Script:
-- Trigger: onEdit / onChange on the Google Sheet
-- Cache stored as geocoded_cache.json on Google Drive
-- Output index.html written to Google Drive (public share link)
-- Chunked geocoding to handle Apps Script's 6-minute execution limit:
-  - Save pending address queue + progress in PropertiesService
-  - Geocode ~50 addresses per run (~50 sec)
-  - Self-schedule a 1-minute time trigger to continue until done
-  - On final chunk: regenerate HTML, delete trigger, clear state
-  - If sheet is edited mid-process: merge new addresses into queue, don't restart
+### Overview
+- Google Sheet is the data source (shared as "Anyone with the link can view")
+- Google Apps Script `onEdit` trigger sends a webhook to GitHub Actions
+- GitHub Actions downloads the sheet as CSV, runs the Python pipeline, deploys to GitHub Pages
+- Map is publicly accessible at `https://davidpalfi.github.io/kopogtatas-terkep/`
+
+### GitHub Actions workflow (`.github/workflows/deploy.yml`)
+- Triggers: `repository_dispatch` (from Apps Script webhook) + `workflow_dispatch` (manual)
+- Downloads Google Sheet as CSV: `https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv`
+- Runs: `convert_addresses.py` → `geocode.py` → `generate_map.py`
+- Commits updated `geocoded_cache.json` to main (cache persists across runs)
+- Deploys `index.html` + `geocoded_cache.json` to `gh-pages` branch
+
+### Google Apps Script (bound to the Google Sheet)
+```javascript
+function onEdit(e) {
+  var token = PropertiesService.getScriptProperties().getProperty('GITHUB_PAT');
+  UrlFetchApp.fetch(
+    'https://api.github.com/repos/davidpalfi/kopogtatas-terkep/dispatches',
+    {
+      method: 'post',
+      headers: {
+        'Authorization': 'token ' + token,
+        'Accept': 'application/vnd.github.v3+json'
+      },
+      payload: JSON.stringify({ event_type: 'sheet-updated' }),
+      contentType: 'application/json'
+    }
+  );
+}
+```
+Note: Use an **installable** onChange trigger for edits by other users.
+
+### Required secrets
+| Secret | Where | Purpose |
+|--------|-------|---------|
+| `GOOGLE_MAPS_API_KEY` | GitHub repo secret | Geocoding + Maps JS API |
+| `GOOGLE_SHEET_ID` | GitHub repo secret | Identifies the source sheet |
+| `GITHUB_PAT` | Google Apps Script property | Auth for webhook |
+
+### Setup steps
+1. GitHub repo → Settings → Secrets → add `GOOGLE_MAPS_API_KEY` and `GOOGLE_SHEET_ID`
+2. GitHub repo → Settings → Pages → source: branch `gh-pages`
+3. Create a GitHub PAT (fine-grained, repo scope for this repo only)
+4. Google Sheet → Extensions → Apps Script → paste the onEdit function above
+5. Apps Script → Project Settings → Script Properties → add `GITHUB_PAT`
+6. Apps Script → Triggers → Add → onChange (installable, catches all edits)
+7. Restrict Google Maps API key to `davidpalfi.github.io` in Google Cloud Console
+8. Run workflow manually once to verify
 
 ---
 
@@ -102,24 +141,27 @@ Rows with empty Házszámok are skipped (these are streets without specific hous
 ---
 
 ## Map (index.html) spec
-- Library: Leaflet.js (loaded from CDN)
-- Tiles: OpenStreetMap (no API key needed)
-- Clustering: Leaflet.markercluster plugin (pins cluster when zoomed out)
+- Library: Google Maps JavaScript API (loaded from CDN)
+- Map ID: kopogtat_s_t_rk_p (custom styled map)
+- Custom house icon (SVG path, dark blue #1a237e)
+- Geocoding API: Google Geocoding API (build-time only)
 - Pin popup content: full address (Megjegyzés not shown for now)
-- All pin data embedded as a JS array in the HTML (no runtime API calls)
+- All pin data embedded as a JS array in the HTML (no runtime geocoding calls)
 - Must be a single self-contained file a non-technical user can open via one link
-- Initial view: fixed center 46.37°N 18.14°E (Dombóvár area), zoom 12
+- Initial view: fitted to Dombóvár bounding box (46.370–46.389°N, 18.121–18.166°E)
 
 ---
 
 ## Existing files
-- input.csv             — source address data
-- convert_addresses.py  — Step 1: expands ranges, respects Oldal, produces address_list.csv
-- address_list.csv      — expanded address list (output of Step 1; becomes a Google Sheet in Phase 2)
-- geocode.py            — Step 2: reads address_list.csv, geocodes via Nominatim, produces cache
-- geocoded_cache.json   — persistent geocoding cache (created by geocode.py)
-- generate_map.py       — Step 3: reads cache, produces index.html
-- index.html            — output map (created by generate_map.py)
-- run.sh                — runs all 3 steps in sequence
-- spec.md               — project specification (this file)
-- progress.txt          — detailed progress tracking, architecture notes, and changelog
+- input.csv                          — source address data [gitignored, downloaded from Sheet in CI]
+- convert_addresses.py               — Step 1: expands ranges, respects Oldal, produces address_list.csv
+- address_list.csv                   — expanded address list
+- geocode.py                         — Step 2: reads address_list.csv, geocodes via Google API, produces cache
+- geocoded_cache.json                — persistent geocoding cache (committed for CI persistence)
+- generate_map.py                    — Step 3: reads cache, produces index.html
+- index.html                         — output map (created by generate_map.py)
+- run.sh                             — runs all 3 steps in sequence (local use)
+- .github/workflows/deploy.yml       — GitHub Actions: download sheet → pipeline → deploy to Pages
+- .env                               — local env vars (GOOGLE_MAPS_API_KEY) [gitignored]
+- spec.md                            — project specification (this file)
+- progress.txt                       — detailed progress tracking, architecture notes, and changelog
