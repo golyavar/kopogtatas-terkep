@@ -7,10 +7,10 @@ OUTPUT_HTML = "index.html"
 API_KEY = os.environ.get("GOOGLE_MAPS_API_KEY", "YOUR_API_KEY")
 
 # Tighter bounding box for Dombóvár centre
-DOMBOVAR_SOUTH = 46.367
+DOMBOVAR_SOUTH = 46.370
 DOMBOVAR_NORTH = 46.389
-DOMBOVAR_WEST = 18.119
-DOMBOVAR_EAST = 18.168
+DOMBOVAR_WEST = 18.121
+DOMBOVAR_EAST = 18.166
 
 
 def main():
@@ -62,7 +62,7 @@ def main():
         fillOpacity: 1,
         strokeColor: '#0d1442',
         strokeWeight: 1,
-        scale: 1.2,
+        scale: 0.7,
         anchor: new google.maps.Point(12, 22),
       }};
 
