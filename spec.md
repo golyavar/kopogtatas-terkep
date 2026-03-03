@@ -57,22 +57,25 @@ python generate_map.py
 
 ---
 
-## Phase 2 — Cloud deployment (DONE — GitHub Actions + Netlify)
+## Phase 2 — Cloud deployment (DONE — GitHub Actions + GitHub Pages)
 
 ### Status: FULLY OPERATIONAL
 The end-to-end auto-update flow is working:
 1. User edits Google Sheet
 2. Apps Script onChange trigger fires → sends webhook to GitHub
 3. GitHub Actions downloads sheet, runs pipeline, commits results
-4. Push to main → Netlify auto-deploys updated map
+4. Push to main → GitHub Pages auto-deploys updated map
+
+### Map URL
+https://golyavar.github.io/kopogtatas-terkep/
 
 ### Overview
 - Google Sheet is the data source (shared as "Anyone with the link can view")
 - Google Apps Script installable `onChange` trigger sends a webhook to GitHub Actions
 - GitHub Actions downloads the sheet as CSV, runs the Python pipeline, commits to main
-- Netlify auto-deploys on push to main
-- Map is publicly accessible at the Netlify site URL (no login needed)
-- GitHub repo stays **private** (Netlify works with private repos, unlike GitHub Pages free tier)
+- GitHub Pages auto-deploys on push to main
+- Map is publicly accessible at the GitHub Pages URL (no login needed)
+- Repo hosted under the `golyavar` GitHub organization (separate from personal profile)
 - Any editor of the Google Sheet triggers an update (not just the owner)
 
 ### GitHub Actions workflow (`.github/workflows/deploy.yml`)
@@ -81,14 +84,14 @@ The end-to-end auto-update flow is working:
 - Runs: `convert_addresses.py` → `geocode.py` → `generate_map.py`
 - Commits updated `geocoded_cache.json` and `index.html` to main
 - Cleans up intermediate files (input.csv, address_list.csv) before pull to avoid rebase conflicts
-- Netlify auto-deploys on push (no netlify-cli or Netlify secrets needed)
+- GitHub Pages auto-deploys on push to main
 
 ### Google Apps Script (bound to the Google Sheet)
 ```javascript
 function onEdit(e) {
   var token = PropertiesService.getScriptProperties().getProperty('GITHUB_PAT');
   UrlFetchApp.fetch(
-    'https://api.github.com/repos/davidpalfi/kopogtatas-terkep/dispatches',
+    'https://api.github.com/repos/golyavar/kopogtatas-terkep/dispatches',
     {
       method: 'post',
       headers: {
@@ -112,14 +115,15 @@ for all editors, not just the script owner. Set up via Apps Script → Triggers 
 | `GITHUB_PAT` | Google Apps Script property | Auth for webhook |
 
 ### Setup steps
-1. Create a free Netlify account and connect the GitHub repo (Netlify auto-deploys on push)
-2. GitHub repo → Settings → Secrets → add `GOOGLE_MAPS_API_KEY` and `GOOGLE_SHEET_ID`
-3. Create a GitHub PAT (fine-grained, repo scope for this repo only)
-4. Google Sheet → Extensions → Apps Script → paste the onEdit function above
-5. Apps Script → Project Settings → Script Properties → add `GITHUB_PAT`
-6. Apps Script → Triggers → Add → onChange (installable, catches all edits)
-7. Restrict Google Maps API key to the Netlify site domain in Google Cloud Console
-8. Run workflow manually once (`workflow_dispatch`) to verify
+1. Create a GitHub organization (e.g. `golyavar`) and transfer the repo to it
+2. Make the repo public and enable GitHub Pages (Settings → Pages → main branch, root)
+3. GitHub repo → Settings → Secrets → add `GOOGLE_MAPS_API_KEY` and `GOOGLE_SHEET_ID`
+4. Create a GitHub PAT (fine-grained, scoped to the org repo)
+5. Google Sheet → Extensions → Apps Script → paste the onEdit function above
+6. Apps Script → Project Settings → Script Properties → add `GITHUB_PAT`
+7. Apps Script → Triggers → Add → onChange (installable, catches all edits)
+8. Restrict Google Maps API key to the GitHub Pages domain in Google Cloud Console
+9. Run workflow manually once (`workflow_dispatch`) to verify
 
 ---
 
@@ -173,7 +177,7 @@ Rows with empty Házszámok are skipped (these are streets without specific hous
 - generate_map.py                    — Step 3: reads cache, produces index.html
 - index.html                         — output map (created by generate_map.py)
 - run.sh                             — runs all 3 steps in sequence (local use)
-- .github/workflows/deploy.yml       — GitHub Actions: download sheet → pipeline → commit → Netlify auto-deploys
+- .github/workflows/deploy.yml       — GitHub Actions: download sheet → pipeline → commit → GitHub Pages auto-deploys
 - .env                               — local env vars (GOOGLE_MAPS_API_KEY) [gitignored]
 - spec.md                            — project specification (this file)
 - progress.txt                       — detailed progress tracking, architecture notes, and changelog
