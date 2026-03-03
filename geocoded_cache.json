@@ -3114,5 +3114,949 @@
   "Rezeda utca 28, Dombóvár, Hungary": {
     "lat": 46.3842034,
     "lon": 18.1178751
+  },
+  "Ibolya utca 1, Dombóvár, Hungary": {
+    "lat": 46.381301,
+    "lon": 18.1256088
+  },
+  "Ibolya utca 3, Dombóvár, Hungary": {
+    "lat": 46.3815963,
+    "lon": 18.1249923
+  },
+  "Ibolya utca 5, Dombóvár, Hungary": {
+    "lat": 46.38175649999999,
+    "lon": 18.1249156
+  },
+  "Ibolya utca 7, Dombóvár, Hungary": {
+    "lat": 46.3827009,
+    "lon": 18.1238673
+  },
+  "Ibolya utca 9, Dombóvár, Hungary": {
+    "lat": 46.3828427,
+    "lon": 18.1237688
+  },
+  "Ibolya utca 11, Dombóvár, Hungary": {
+    "lat": 46.3809722,
+    "lon": 18.1258607
+  },
+  "Ibolya utca 13, Dombóvár, Hungary": {
+    "lat": 46.3831069,
+    "lon": 18.1235011
+  },
+  "Ibolya utca 15, Dombóvár, Hungary": {
+    "lat": 46.3832364,
+    "lon": 18.1233518
+  },
+  "Ibolya utca 17, Dombóvár, Hungary": {
+    "lat": 46.3833699,
+    "lon": 18.1232064
+  },
+  "Ibolya utca 19, Dombóvár, Hungary": {
+    "lat": 46.38349909999999,
+    "lon": 18.1230722
+  },
+  "Ibolya utca 21, Dombóvár, Hungary": {
+    "lat": 46.3836257,
+    "lon": 18.1228846
+  },
+  "Ibolya utca 23, Dombóvár, Hungary": {
+    "lat": 46.38359850000001,
+    "lon": 18.1229586
+  },
+  "Ibolya utca 25, Dombóvár, Hungary": {
+    "lat": 46.38390159999999,
+    "lon": 18.1227351
+  },
+  "Ibolya utca 2, Dombóvár, Hungary": {
+    "lat": 46.3817219,
+    "lon": 18.1257537
+  },
+  "Ibolya utca 4, Dombóvár, Hungary": {
+    "lat": 46.3817745,
+    "lon": 18.1254186
+  },
+  "Ibolya utca 6, Dombóvár, Hungary": {
+    "lat": 46.3819098,
+    "lon": 18.1252532
+  },
+  "Ibolya utca 8, Dombóvár, Hungary": {
+    "lat": 46.3826589,
+    "lon": 18.1244908
+  },
+  "Ibolya utca 10, Dombóvár, Hungary": {
+    "lat": 46.3825799,
+    "lon": 18.1245696
+  },
+  "Ibolya utca 12, Dombóvár, Hungary": {
+    "lat": 46.3829065,
+    "lon": 18.1242718
+  },
+  "Ibolya utca 14, Dombóvár, Hungary": {
+    "lat": 46.383288,
+    "lon": 18.1238392
+  },
+  "Ibolya utca 16, Dombóvár, Hungary": {
+    "lat": 46.3833948,
+    "lon": 18.1237148
+  },
+  "Ibolya utca 18, Dombóvár, Hungary": {
+    "lat": 46.3834334,
+    "lon": 18.1236731
+  },
+  "Ibolya utca 20, Dombóvár, Hungary": {
+    "lat": 46.3836946,
+    "lon": 18.1234594
+  },
+  "Ibolya utca 22, Dombóvár, Hungary": {
+    "lat": 46.38380919999999,
+    "lon": 18.1232911
+  },
+  "Ibolya utca 24, Dombóvár, Hungary": {
+    "lat": 46.3838787,
+    "lon": 18.1231719
+  },
+  "Jácint utca 1, Dombóvár, Hungary": {
+    "lat": 46.384747,
+    "lon": 18.121107
+  },
+  "Jácint utca 3, Dombóvár, Hungary": {
+    "lat": 46.38484709999999,
+    "lon": 18.1210969
+  },
+  "Jácint utca 5, Dombóvár, Hungary": {
+    "lat": 46.38489209999999,
+    "lon": 18.1210648
+  },
+  "Jácint utca 7, Dombóvár, Hungary": {
+    "lat": 46.3850964,
+    "lon": 18.1209108
+  },
+  "Jácint utca 9, Dombóvár, Hungary": {
+    "lat": 46.38520399999999,
+    "lon": 18.120844
+  },
+  "Jácint utca 2, Dombóvár, Hungary": {
+    "lat": 46.38511949999999,
+    "lon": 18.1214122
+  },
+  "Jácint utca 4, Dombóvár, Hungary": {
+    "lat": 46.3852406,
+    "lon": 18.1213317
+  },
+  "Jácint utca 6, Dombóvár, Hungary": {
+    "lat": 46.3853628,
+    "lon": 18.1212712
+  },
+  "Jácint utca 8, Dombóvár, Hungary": {
+    "lat": 46.38559919999999,
+    "lon": 18.1210824
+  },
+  "Jácint utca 10, Dombóvár, Hungary": {
+    "lat": 46.3855562,
+    "lon": 18.1211107
+  },
+  "Jácint utca 12, Dombóvár, Hungary": {
+    "lat": 46.3857016,
+    "lon": 18.121011
+  },
+  "Jácint utca 14, Dombóvár, Hungary": {
+    "lat": 46.38580229999999,
+    "lon": 18.1209256
+  },
+  "Kéknefelejcs utca 1, Dombóvár, Hungary": {
+    "lat": 46.3818034,
+    "lon": 18.1262666
+  },
+  "Kéknefelejcs utca 3, Dombóvár, Hungary": {
+    "lat": 46.381966,
+    "lon": 18.1261416
+  },
+  "Kéknefelejcs utca 5, Dombóvár, Hungary": {
+    "lat": 46.3822415,
+    "lon": 18.125903
+  },
+  "Kéknefelejcs utca 7, Dombóvár, Hungary": {
+    "lat": 46.3822754,
+    "lon": 18.1258463
+  },
+  "Kéknefelejcs utca 9, Dombóvár, Hungary": {
+    "lat": 46.3825463,
+    "lon": 18.1255882
+  },
+  "Kéknefelejcs utca 11, Dombóvár, Hungary": {
+    "lat": 46.3833405,
+    "lon": 18.1247634
+  },
+  "Kéknefelejcs utca 13, Dombóvár, Hungary": {
+    "lat": 46.38348269999999,
+    "lon": 18.1246273
+  },
+  "Kéknefelejcs utca 15, Dombóvár, Hungary": {
+    "lat": 46.3835901,
+    "lon": 18.1244337
+  },
+  "Kéknefelejcs utca 17, Dombóvár, Hungary": {
+    "lat": 46.3837362,
+    "lon": 18.1243278
+  },
+  "Kéknefelejcs utca 19, Dombóvár, Hungary": {
+    "lat": 46.3838695,
+    "lon": 18.1241842
+  },
+  "Kéknefelejcs utca 21, Dombóvár, Hungary": {
+    "lat": 46.3839828,
+    "lon": 18.1240287
+  },
+  "Kéknefelejcs utca 23, Dombóvár, Hungary": {
+    "lat": 46.3840918,
+    "lon": 18.1238595
+  },
+  "Kéknefelejcs utca 25, Dombóvár, Hungary": {
+    "lat": 46.3838928,
+    "lon": 18.1226726
+  },
+  "Kéknefelejcs utca 2, Dombóvár, Hungary": {
+    "lat": 46.3820364,
+    "lon": 18.1267367
+  },
+  "Kéknefelejcs utca 4, Dombóvár, Hungary": {
+    "lat": 46.3821386,
+    "lon": 18.1265168
+  },
+  "Kéknefelejcs utca 6, Dombóvár, Hungary": {
+    "lat": 46.382284,
+    "lon": 18.1264154
+  },
+  "Kéknefelejcs utca 8, Dombóvár, Hungary": {
+    "lat": 46.3824137,
+    "lon": 18.1262789
+  },
+  "Kéknefelejcs utca 10, Dombóvár, Hungary": {
+    "lat": 46.38340220000001,
+    "lon": 18.1252462
+  },
+  "Kéknefelejcs utca 12, Dombóvár, Hungary": {
+    "lat": 46.38314,
+    "lon": 18.125464
+  },
+  "Kéknefelejcs utca 14, Dombóvár, Hungary": {
+    "lat": 46.3836792,
+    "lon": 18.1250021
+  },
+  "Kéknefelejcs utca 16, Dombóvár, Hungary": {
+    "lat": 46.3838134,
+    "lon": 18.1248675
+  },
+  "Kéknefelejcs utca 18, Dombóvár, Hungary": {
+    "lat": 46.3839097,
+    "lon": 18.124741
+  },
+  "Kéknefelejcs utca 20, Dombóvár, Hungary": {
+    "lat": 46.3839547,
+    "lon": 18.1246978
+  },
+  "Kéknefelejcs utca 22, Dombóvár, Hungary": {
+    "lat": 46.38422629999999,
+    "lon": 18.1244016
+  },
+  "Kéknefelejcs utca 24, Dombóvár, Hungary": {
+    "lat": 46.3842588,
+    "lon": 18.1243497
+  },
+  "Kéknefelejcs utca 26, Dombóvár, Hungary": {
+    "lat": 46.3844139,
+    "lon": 18.1239081
+  },
+  "Kéknefelejcs utca 28, Dombóvár, Hungary": {
+    "lat": 46.3844473,
+    "lon": 18.1235605
+  },
+  "Kéknefelejcs utca 30, Dombóvár, Hungary": {
+    "lat": 46.38441599999999,
+    "lon": 18.123281
+  },
+  "Kéknefelejcs utca 32, Dombóvár, Hungary": {
+    "lat": 46.3842978,
+    "lon": 18.1230205
+  },
+  "Kéknefelejcs utca 34, Dombóvár, Hungary": {
+    "lat": 46.3840207,
+    "lon": 18.1224919
+  },
+  "Kéknefelejcs utca 36, Dombóvár, Hungary": {
+    "lat": 46.3841879,
+    "lon": 18.122782
+  },
+  "Liliom utca 1, Dombóvár, Hungary": {
+    "lat": 46.3798978,
+    "lon": 18.1221707
+  },
+  "Liliom utca 3, Dombóvár, Hungary": {
+    "lat": 46.3800761,
+    "lon": 18.1220648
+  },
+  "Liliom utca 5, Dombóvár, Hungary": {
+    "lat": 46.380225,
+    "lon": 18.1219389
+  },
+  "Liliom utca 7, Dombóvár, Hungary": {
+    "lat": 46.380804,
+    "lon": 18.121331
+  },
+  "Liliom utca 9, Dombóvár, Hungary": {
+    "lat": 46.3812504,
+    "lon": 18.1208707
+  },
+  "Liliom utca 11, Dombóvár, Hungary": {
+    "lat": 46.3813836,
+    "lon": 18.1207274
+  },
+  "Liliom utca 13, Dombóvár, Hungary": {
+    "lat": 46.3815131,
+    "lon": 18.1205849
+  },
+  "Liliom utca 15, Dombóvár, Hungary": {
+    "lat": 46.3816405,
+    "lon": 18.1204508
+  },
+  "Liliom utca 17, Dombóvár, Hungary": {
+    "lat": 46.38186839999999,
+    "lon": 18.1201676
+  },
+  "Liliom utca 19, Dombóvár, Hungary": {
+    "lat": 46.3819066,
+    "lon": 18.1201292
+  },
+  "Liliom utca 21, Dombóvár, Hungary": {
+    "lat": 46.3820013,
+    "lon": 18.1200803
+  },
+  "Liliom utca 2, Dombóvár, Hungary": {
+    "lat": 46.3798954,
+    "lon": 18.1226235
+  },
+  "Liliom utca 4, Dombóvár, Hungary": {
+    "lat": 46.3811887,
+    "lon": 18.1215191
+  },
+  "Liliom utca 6, Dombóvár, Hungary": {
+    "lat": 46.3803823,
+    "lon": 18.1222291
+  },
+  "Liliom utca 8, Dombóvár, Hungary": {
+    "lat": 46.3813233,
+    "lon": 18.1212836
+  },
+  "Liliom utca 10, Dombóvár, Hungary": {
+    "lat": 46.381597,
+    "lon": 18.1209988
+  },
+  "Liliom utca 12, Dombóvár, Hungary": {
+    "lat": 46.3818496,
+    "lon": 18.120734
+  },
+  "Liliom utca 14, Dombóvár, Hungary": {
+    "lat": 46.3821054,
+    "lon": 18.1204534
+  },
+  "Liliom utca 16, Dombóvár, Hungary": {
+    "lat": 46.3823695,
+    "lon": 18.1202082
+  },
+  "Margaréta utca 1, Dombóvár, Hungary": {
+    "lat": 46.3838111,
+    "lon": 18.1208281
+  },
+  "Margaréta utca 3, Dombóvár, Hungary": {
+    "lat": 46.3841225,
+    "lon": 18.1202847
+  },
+  "Margaréta utca 5, Dombóvár, Hungary": {
+    "lat": 46.3842149,
+    "lon": 18.1201216
+  },
+  "Margaréta utca 7, Dombóvár, Hungary": {
+    "lat": 46.3843588,
+    "lon": 18.1199781
+  },
+  "Margaréta utca 9, Dombóvár, Hungary": {
+    "lat": 46.3844711,
+    "lon": 18.1198888
+  },
+  "Margaréta utca 11, Dombóvár, Hungary": {
+    "lat": 46.3845646,
+    "lon": 18.119875
+  },
+  "Margaréta utca 13, Dombóvár, Hungary": {
+    "lat": 46.3846064,
+    "lon": 18.1198444
+  },
+  "Margaréta utca 15, Dombóvár, Hungary": {
+    "lat": 46.3847715,
+    "lon": 18.1196652
+  },
+  "Margaréta utca 2, Dombóvár, Hungary": {
+    "lat": 46.383969,
+    "lon": 18.121224
+  },
+  "Margaréta utca 4, Dombóvár, Hungary": {
+    "lat": 46.3841521,
+    "lon": 18.1211058
+  },
+  "Margaréta utca 6, Dombóvár, Hungary": {
+    "lat": 46.3845009,
+    "lon": 18.1204206
+  },
+  "Margaréta utca 8, Dombóvár, Hungary": {
+    "lat": 46.38461580000001,
+    "lon": 18.1203292
+  },
+  "Margaréta utca 10, Dombóvár, Hungary": {
+    "lat": 46.38474660000001,
+    "lon": 18.1202852
+  },
+  "Margaréta utca 12, Dombóvár, Hungary": {
+    "lat": 46.3848507,
+    "lon": 18.1201698
+  },
+  "Muskátli utca 1, Dombóvár, Hungary": {
+    "lat": 46.3830939,
+    "lon": 18.1202141
+  },
+  "Muskátli utca 3, Dombóvár, Hungary": {
+    "lat": 46.3831642,
+    "lon": 18.1200804
+  },
+  "Muskátli utca 5, Dombóvár, Hungary": {
+    "lat": 46.383392,
+    "lon": 18.1195897
+  },
+  "Muskátli utca 7, Dombóvár, Hungary": {
+    "lat": 46.3834704,
+    "lon": 18.1193833
+  },
+  "Muskátli utca 9, Dombóvár, Hungary": {
+    "lat": 46.3835347,
+    "lon": 18.119176
+  },
+  "Muskátli utca 11, Dombóvár, Hungary": {
+    "lat": 46.3836777,
+    "lon": 18.1190916
+  },
+  "Muskátli utca 13, Dombóvár, Hungary": {
+    "lat": 46.3838436,
+    "lon": 18.1189925
+  },
+  "Muskátli utca 15, Dombóvár, Hungary": {
+    "lat": 46.3837213,
+    "lon": 18.1190567
+  },
+  "Muskátli utca 17, Dombóvár, Hungary": {
+    "lat": 46.3841031,
+    "lon": 18.1187865
+  },
+  "Muskátli utca 19, Dombóvár, Hungary": {
+    "lat": 46.38420370000001,
+    "lon": 18.1187137
+  },
+  "Muskátli utca 21, Dombóvár, Hungary": {
+    "lat": 46.3843336,
+    "lon": 18.1186684
+  },
+  "Muskátli utca 23, Dombóvár, Hungary": {
+    "lat": 46.3844392,
+    "lon": 18.1185732
+  },
+  "Muskátli utca 2, Dombóvár, Hungary": {
+    "lat": 46.3835848,
+    "lon": 18.1200284
+  },
+  "Muskátli utca 4, Dombóvár, Hungary": {
+    "lat": 46.3834336,
+    "lon": 18.1203379
+  },
+  "Muskátli utca 6, Dombóvár, Hungary": {
+    "lat": 46.38366260000001,
+    "lon": 18.1196223
+  },
+  "Muskátli utca 8, Dombóvár, Hungary": {
+    "lat": 46.383844,
+    "lon": 18.1195245
+  },
+  "Muskátli utca 10, Dombóvár, Hungary": {
+    "lat": 46.383686,
+    "lon": 18.11963
+  },
+  "Muskátli utca 12, Dombóvár, Hungary": {
+    "lat": 46.3841342,
+    "lon": 18.1193377
+  },
+  "Muskátli utca 14, Dombóvár, Hungary": {
+    "lat": 46.38424450000001,
+    "lon": 18.1192288
+  },
+  "Muskátli utca 16, Dombóvár, Hungary": {
+    "lat": 46.3843542,
+    "lon": 18.1191555
+  },
+  "Muskátli utca 18, Dombóvár, Hungary": {
+    "lat": 46.38446219999999,
+    "lon": 18.1190627
+  },
+  "Muskátli utca 20, Dombóvár, Hungary": {
+    "lat": 46.38457440000001,
+    "lon": 18.1189804
+  },
+  "Orgona utca 1, Dombóvár, Hungary": {
+    "lat": 46.38093079999999,
+    "lon": 18.1241646
+  },
+  "Orgona utca 3, Dombóvár, Hungary": {
+    "lat": 46.3811113,
+    "lon": 18.1240624
+  },
+  "Orgona utca 5, Dombóvár, Hungary": {
+    "lat": 46.3812344,
+    "lon": 18.1239199
+  },
+  "Orgona utca 7, Dombóvár, Hungary": {
+    "lat": 46.381854,
+    "lon": 18.12325
+  },
+  "Orgona utca 9, Dombóvár, Hungary": {
+    "lat": 46.3822694,
+    "lon": 18.1228191
+  },
+  "Orgona utca 11, Dombóvár, Hungary": {
+    "lat": 46.38223180000001,
+    "lon": 18.1228574
+  },
+  "Orgona utca 13, Dombóvár, Hungary": {
+    "lat": 46.3825048,
+    "lon": 18.1225458
+  },
+  "Orgona utca 15, Dombóvár, Hungary": {
+    "lat": 46.3826401,
+    "lon": 18.1224423
+  },
+  "Orgona utca 17, Dombóvár, Hungary": {
+    "lat": 46.3827614,
+    "lon": 18.1223138
+  },
+  "Orgona utca 19, Dombóvár, Hungary": {
+    "lat": 46.3830557,
+    "lon": 18.12202
+  },
+  "Orgona utca 21, Dombóvár, Hungary": {
+    "lat": 46.383161,
+    "lon": 18.1218483
+  },
+  "Orgona utca 23, Dombóvár, Hungary": {
+    "lat": 46.383352,
+    "lon": 18.121651
+  },
+  "Orgona utca 25, Dombóvár, Hungary": {
+    "lat": 46.3835205,
+    "lon": 18.1214165
+  },
+  "Orgona utca 2, Dombóvár, Hungary": {
+    "lat": 46.38113999999999,
+    "lon": 18.1245665
+  },
+  "Orgona utca 4, Dombóvár, Hungary": {
+    "lat": 46.3812398,
+    "lon": 18.1243808
+  },
+  "Orgona utca 6, Dombóvár, Hungary": {
+    "lat": 46.3813909,
+    "lon": 18.1242702
+  },
+  "Orgona utca 8, Dombóvár, Hungary": {
+    "lat": 46.3823789,
+    "lon": 18.1232467
+  },
+  "Orgona utca 10, Dombóvár, Hungary": {
+    "lat": 46.3825234,
+    "lon": 18.1231131
+  },
+  "Orgona utca 12, Dombóvár, Hungary": {
+    "lat": 46.3826498,
+    "lon": 18.1229694
+  },
+  "Orgona utca 14, Dombóvár, Hungary": {
+    "lat": 46.382723,
+    "lon": 18.1228095
+  },
+  "Orgona utca 16, Dombóvár, Hungary": {
+    "lat": 46.3829309,
+    "lon": 18.1227614
+  },
+  "Orgona utca 18, Dombóvár, Hungary": {
+    "lat": 46.3830756,
+    "lon": 18.1226311
+  },
+  "Orgona utca 20, Dombóvár, Hungary": {
+    "lat": 46.3831723,
+    "lon": 18.1224237
+  },
+  "Orgona utca 22, Dombóvár, Hungary": {
+    "lat": 46.3833067,
+    "lon": 18.1223005
+  },
+  "Orgona utca 24, Dombóvár, Hungary": {
+    "lat": 46.3834388,
+    "lon": 18.1221319
+  },
+  "Orgona utca 26, Dombóvár, Hungary": {
+    "lat": 46.383581,
+    "lon": 18.1220196
+  },
+  "Orgona utca 28, Dombóvár, Hungary": {
+    "lat": 46.3837278,
+    "lon": 18.121905
+  },
+  "Orgona utca 30, Dombóvár, Hungary": {
+    "lat": 46.3838387,
+    "lon": 18.1216604
+  },
+  "Szegfű utca 1, Dombóvár, Hungary": {
+    "lat": 46.3802112,
+    "lon": 18.1235239
+  },
+  "Szegfű utca 3, Dombóvár, Hungary": {
+    "lat": 46.3805518,
+    "lon": 18.1230192
+  },
+  "Szegfű utca 5, Dombóvár, Hungary": {
+    "lat": 46.3807313,
+    "lon": 18.1228776
+  },
+  "Szegfű utca 7, Dombóvár, Hungary": {
+    "lat": 46.3816582,
+    "lon": 18.1219543
+  },
+  "Szegfű utca 9, Dombóvár, Hungary": {
+    "lat": 46.3819218,
+    "lon": 18.1216753
+  },
+  "Szegfű utca 11, Dombóvár, Hungary": {
+    "lat": 46.3821833,
+    "lon": 18.1214033
+  },
+  "Szegfű utca 13, Dombóvár, Hungary": {
+    "lat": 46.3824834,
+    "lon": 18.121095
+  },
+  "Szegfű utca 15, Dombóvár, Hungary": {
+    "lat": 46.38270920000001,
+    "lon": 18.1208367
+  },
+  "Szegfű utca 17, Dombóvár, Hungary": {
+    "lat": 46.3828466,
+    "lon": 18.1206886
+  },
+  "Szegfű utca 2, Dombóvár, Hungary": {
+    "lat": 46.380654,
+    "lon": 18.1235927
+  },
+  "Szegfű utca 4, Dombóvár, Hungary": {
+    "lat": 46.3808027,
+    "lon": 18.1234433
+  },
+  "Szegfű utca 6, Dombóvár, Hungary": {
+    "lat": 46.38148,
+    "lon": 18.122606
+  },
+  "Szegfű utca 8, Dombóvár, Hungary": {
+    "lat": 46.3817038,
+    "lon": 18.1225053
+  },
+  "Szegfű utca 10, Dombóvár, Hungary": {
+    "lat": 46.3819621,
+    "lon": 18.122126
+  },
+  "Szegfű utca 12, Dombóvár, Hungary": {
+    "lat": 46.3820315,
+    "lon": 18.1220549
+  },
+  "Szegfű utca 14, Dombóvár, Hungary": {
+    "lat": 46.3821854,
+    "lon": 18.1218931
+  },
+  "Szegfű utca 16, Dombóvár, Hungary": {
+    "lat": 46.3822522,
+    "lon": 18.1218221
+  },
+  "Szegfű utca 18, Dombóvár, Hungary": {
+    "lat": 46.38244479999999,
+    "lon": 18.1216126
+  },
+  "Szegfű utca 20, Dombóvár, Hungary": {
+    "lat": 46.38251409999999,
+    "lon": 18.1215455
+  },
+  "Szegfű utca 22, Dombóvár, Hungary": {
+    "lat": 46.382721,
+    "lon": 18.1213292
+  },
+  "Szegfű utca 24, Dombóvár, Hungary": {
+    "lat": 46.38280719999999,
+    "lon": 18.1212434
+  },
+  "Szegfű utca 26, Dombóvár, Hungary": {
+    "lat": 46.3829444,
+    "lon": 18.1211588
+  },
+  "Szegfű utca 28, Dombóvár, Hungary": {
+    "lat": 46.3830813,
+    "lon": 18.1211484
+  },
+  "Tátika utca 1, Dombóvár, Hungary": {
+    "lat": 46.3821715,
+    "lon": 18.1175288
+  },
+  "Tátika utca 3, Dombóvár, Hungary": {
+    "lat": 46.3821082,
+    "lon": 18.1172974
+  },
+  "Tátika utca 5, Dombóvár, Hungary": {
+    "lat": 46.3820382,
+    "lon": 18.117101
+  },
+  "Tátika utca 7, Dombóvár, Hungary": {
+    "lat": 46.3819917,
+    "lon": 18.1168225
+  },
+  "Tátika utca 9, Dombóvár, Hungary": {
+    "lat": 46.3819729,
+    "lon": 18.1169126
+  },
+  "Tátika utca 11, Dombóvár, Hungary": {
+    "lat": 46.381853,
+    "lon": 18.1165371
+  },
+  "Tátika utca 13, Dombóvár, Hungary": {
+    "lat": 46.38177719999999,
+    "lon": 18.1163435
+  },
+  "Tátika utca 15, Dombóvár, Hungary": {
+    "lat": 46.3817113,
+    "lon": 18.1161728
+  },
+  "Tátika utca 17, Dombóvár, Hungary": {
+    "lat": 46.3816493,
+    "lon": 18.1159834
+  },
+  "Tátika utca 19, Dombóvár, Hungary": {
+    "lat": 46.3815253,
+    "lon": 18.115593
+  },
+  "Tátika utca 2, Dombóvár, Hungary": {
+    "lat": 46.3824182,
+    "lon": 18.1172112
+  },
+  "Tátika utca 4, Dombóvár, Hungary": {
+    "lat": 46.3823591,
+    "lon": 18.1170205
+  },
+  "Tátika utca 6, Dombóvár, Hungary": {
+    "lat": 46.3822991,
+    "lon": 18.1168314
+  },
+  "Tátika utca 8, Dombóvár, Hungary": {
+    "lat": 46.38224719999999,
+    "lon": 18.1166237
+  },
+  "Tátika utca 10, Dombóvár, Hungary": {
+    "lat": 46.3821483,
+    "lon": 18.1164648
+  },
+  "Tátika utca 12, Dombóvár, Hungary": {
+    "lat": 46.3820184,
+    "lon": 18.1160865
+  },
+  "Tátika utca 14, Dombóvár, Hungary": {
+    "lat": 46.3819984,
+    "lon": 18.1158895
+  },
+  "Tátika utca 16, Dombóvár, Hungary": {
+    "lat": 46.3818437,
+    "lon": 18.1155693
+  },
+  "Tulipán utca 1, Dombóvár, Hungary": {
+    "lat": 46.3830155,
+    "lon": 18.1266444
+  },
+  "Tulipán utca 3, Dombóvár, Hungary": {
+    "lat": 46.3829127,
+    "lon": 18.1264162
+  },
+  "Tulipán utca 5, Dombóvár, Hungary": {
+    "lat": 46.3828267,
+    "lon": 18.1262066
+  },
+  "Tulipán utca 7, Dombóvár, Hungary": {
+    "lat": 46.3826985,
+    "lon": 18.1259761
+  },
+  "Tulipán utca 9, Dombóvár, Hungary": {
+    "lat": 46.3825596,
+    "lon": 18.1256207
+  },
+  "Tulipán utca 11, Dombóvár, Hungary": {
+    "lat": 46.38241319999999,
+    "lon": 18.1254317
+  },
+  "Tulipán utca 13, Dombóvár, Hungary": {
+    "lat": 46.3822907,
+    "lon": 18.1252105
+  },
+  "Tulipán utca 15, Dombóvár, Hungary": {
+    "lat": 46.3821881,
+    "lon": 18.1249808
+  },
+  "Tulipán utca 17, Dombóvár, Hungary": {
+    "lat": 46.3820322,
+    "lon": 18.1246426
+  },
+  "Tulipán utca 19, Dombóvár, Hungary": {
+    "lat": 46.3819175,
+    "lon": 18.1244171
+  },
+  "Tulipán utca 21, Dombóvár, Hungary": {
+    "lat": 46.3817877,
+    "lon": 18.1242227
+  },
+  "Tulipán utca 23, Dombóvár, Hungary": {
+    "lat": 46.3817041,
+    "lon": 18.1239644
+  },
+  "Tulipán utca 25, Dombóvár, Hungary": {
+    "lat": 46.38151570000001,
+    "lon": 18.1236442
+  },
+  "Tulipán utca 27, Dombóvár, Hungary": {
+    "lat": 46.3814162,
+    "lon": 18.1233992
+  },
+  "Tulipán utca 29, Dombóvár, Hungary": {
+    "lat": 46.3812947,
+    "lon": 18.1232125
+  },
+  "Tulipán utca 31, Dombóvár, Hungary": {
+    "lat": 46.3811877,
+    "lon": 18.1229328
+  },
+  "Tulipán utca 33, Dombóvár, Hungary": {
+    "lat": 46.381057,
+    "lon": 18.122665
+  },
+  "Tulipán utca 35, Dombóvár, Hungary": {
+    "lat": 46.3808038,
+    "lon": 18.1221887
+  },
+  "Tulipán utca 37, Dombóvár, Hungary": {
+    "lat": 46.3806944,
+    "lon": 18.1219649
+  },
+  "Tulipán utca 39, Dombóvár, Hungary": {
+    "lat": 46.3804899,
+    "lon": 18.1216795
+  },
+  "Tulipán utca 41, Dombóvár, Hungary": {
+    "lat": 46.3803955,
+    "lon": 18.1214258
+  },
+  "Tulipán utca 43, Dombóvár, Hungary": {
+    "lat": 46.3803163,
+    "lon": 18.1212404
+  },
+  "Tulipán utca 45, Dombóvár, Hungary": {
+    "lat": 46.38021910000001,
+    "lon": 18.1210655
+  },
+  "Tulipán utca 2, Dombóvár, Hungary": {
+    "lat": 46.382798,
+    "lon": 18.125418
+  },
+  "Tulipán utca 4, Dombóvár, Hungary": {
+    "lat": 46.382698,
+    "lon": 18.125224
+  },
+  "Tulipán utca 6, Dombóvár, Hungary": {
+    "lat": 46.3825969,
+    "lon": 18.125031
+  },
+  "Tulipán utca 8, Dombóvár, Hungary": {
+    "lat": 46.382497,
+    "lon": 18.124825
+  },
+  "Tulipán utca 10, Dombóvár, Hungary": {
+    "lat": 46.382396,
+    "lon": 18.124631
+  },
+  "Tulipán utca 12, Dombóvár, Hungary": {
+    "lat": 46.382295,
+    "lon": 18.124425
+  },
+  "Tulipán utca 14, Dombóvár, Hungary": {
+    "lat": 46.3822962,
+    "lon": 18.1240226
+  },
+  "Tulipán utca 16, Dombóvár, Hungary": {
+    "lat": 46.38202099999999,
+    "lon": 18.123884
+  },
+  "Tulipán utca 18, Dombóvár, Hungary": {
+    "lat": 46.3820855,
+    "lon": 18.1235625
+  },
+  "Tulipán utca 20, Dombóvár, Hungary": {
+    "lat": 46.38180060000001,
+    "lon": 18.1233493
+  },
+  "Tulipán utca 22, Dombóvár, Hungary": {
+    "lat": 46.3817151,
+    "lon": 18.1230907
+  },
+  "Tulipán utca 24, Dombóvár, Hungary": {
+    "lat": 46.38162089999999,
+    "lon": 18.1228661
+  },
+  "Tulipán utca 26, Dombóvár, Hungary": {
+    "lat": 46.3814224,
+    "lon": 18.1226467
+  },
+  "Tulipán utca 28, Dombóvár, Hungary": {
+    "lat": 46.3813256,
+    "lon": 18.1223215
+  },
+  "Tulipán utca 30, Dombóvár, Hungary": {
+    "lat": 46.3812193,
+    "lon": 18.122116
+  },
+  "Tulipán utca 32, Dombóvár, Hungary": {
+    "lat": 46.3811393,
+    "lon": 18.1218739
+  },
+  "Tulipán utca 34, Dombóvár, Hungary": {
+    "lat": 46.3809851,
+    "lon": 18.1216598
+  },
+  "Tulipán utca 36, Dombóvár, Hungary": {
+    "lat": 46.3807918,
+    "lon": 18.121371
+  },
+  "Tulipán utca 38, Dombóvár, Hungary": {
+    "lat": 46.3806999,
+    "lon": 18.1211133
+  },
+  "Tulipán utca 40, Dombóvár, Hungary": {
+    "lat": 46.3806151,
+    "lon": 18.1208962
+  },
+  "Tulipán utca 42, Dombóvár, Hungary": {
+    "lat": 46.3805102,
+    "lon": 18.120695
   }
 }
