@@ -1,4 +1,4 @@
-name: Update map and deploy to GitHub Pages
+name: Update map and deploy to Netlify
 
 on:
   repository_dispatch:
@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build-and-deploy:
@@ -44,16 +42,11 @@ jobs:
           git pull --rebase origin main
           git push
 
-      - name: Prepare deploy directory
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+
+      - name: Deploy to Netlify
         run: |
           mkdir -p _site
           cp index.html _site/
-          cp geocoded_cache.json _site/
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          publish_branch: gh-pages
-          force_orphan: true
+          netlify deploy --prod --dir=_site --site=${{ secrets.NETLIFY_SITE_ID }} --auth=${{ secrets.NETLIFY_AUTH_TOKEN }}

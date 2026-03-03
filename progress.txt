@@ -119,7 +119,7 @@ Columns: Település (city), Utca (street), Oldal (side: páratlan=odd / páros=
 
 ---
 
-## Cloud workflow (Phase 2) — GitHub Actions + GitHub Pages + Google Apps Script
+## Cloud workflow (Phase 2) — GitHub Actions + Netlify + Google Apps Script
 
 ### Architecture
 ```
@@ -136,10 +136,10 @@ Google Sheet (edited by user)
     ├─ python geocode.py          (uses GOOGLE_MAPS_API_KEY secret)
     ├─ python generate_map.py     (uses GOOGLE_MAPS_API_KEY secret)
     ├─ Commit updated geocoded_cache.json to main
-    └─ Deploy index.html to gh-pages branch → GitHub Pages
+    └─ Deploy index.html to Netlify via netlify-cli
     │
     ▼
-https://davidpalfi.github.io/kopogtatas-terkep/
+https://<site-name>.netlify.app/
 ```
 
 ### Components
@@ -150,7 +150,7 @@ https://davidpalfi.github.io/kopogtatas-terkep/
   `https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv`
 - Runs the 3-step Python pipeline
 - Commits updated geocoded_cache.json to main (so cache persists)
-- Deploys to GitHub Pages via `peaceiris/actions-gh-pages@v4`
+- Deploys index.html to Netlify via `netlify deploy --prod`
 
 #### 2. Google Apps Script (bound to the Google Sheet)
 - Simple `onEdit` function that POSTs to GitHub's repository_dispatch API
@@ -177,10 +177,11 @@ Note: The simple `onEdit` trigger does NOT fire for programmatic changes or
 changes by other users. For those, use an **installable** onChange trigger
 (Extensions → Apps Script → Triggers → Add Trigger → onChange).
 
-#### 3. GitHub Pages
-- Serves from `gh-pages` branch
-- Public URL: `https://davidpalfi.github.io/kopogtatas-terkep/`
+#### 3. Netlify
+- Free tier: 100 GB bandwidth/month, 300 build minutes/month
+- Public URL: `https://<site-name>.netlify.app/`
 - No login or registration needed to view
+- Works with private GitHub repos (unlike GitHub Pages free tier)
 
 ### Secrets / tokens required
 
@@ -188,24 +189,30 @@ changes by other users. For those, use an **installable** onChange trigger
 |--------|-------|---------|
 | `GOOGLE_MAPS_API_KEY` | GitHub repo secret | Geocoding API + Maps JS API in HTML |
 | `GOOGLE_SHEET_ID` | GitHub repo secret | Sheet ID from the URL |
+| `NETLIFY_AUTH_TOKEN` | GitHub repo secret | Netlify personal access token for deploy |
+| `NETLIFY_SITE_ID` | GitHub repo secret | Netlify site identifier |
 | `GITHUB_PAT` | Google Apps Script property | Auth for repository_dispatch webhook |
 
 ### Setup steps (one-time)
-1. Go to GitHub repo → Settings → Secrets → add `GOOGLE_MAPS_API_KEY` and `GOOGLE_SHEET_ID`
-2. Go to GitHub repo → Settings → Pages → set source to "Deploy from a branch", branch `gh-pages`
-3. Create a GitHub PAT (fine-grained, repo scope for this repo only)
-4. In the Google Sheet → Extensions → Apps Script → paste the onEdit function
-5. In Apps Script → Project Settings → Script Properties → add `GITHUB_PAT` with the PAT value
-6. Add an installable trigger: Apps Script → Triggers → Add → onChange (to catch all edits)
-7. Restrict the Google Maps API key in Google Cloud Console to the GitHub Pages domain
-8. Run the workflow manually once (`workflow_dispatch`) to verify
+1. Create a free Netlify account at https://app.netlify.com
+2. Create a new site (manually, no git integration needed) → note the Site ID
+3. Generate a Netlify personal access token: User Settings → Applications → Personal access tokens
+4. Go to GitHub repo → Settings → Secrets → add `GOOGLE_MAPS_API_KEY`, `GOOGLE_SHEET_ID`,
+   `NETLIFY_AUTH_TOKEN`, and `NETLIFY_SITE_ID`
+5. Create a GitHub PAT (fine-grained, repo scope for this repo only)
+6. In the Google Sheet → Extensions → Apps Script → paste the onEdit function
+7. In Apps Script → Project Settings → Script Properties → add `GITHUB_PAT` with the PAT value
+8. Add an installable trigger: Apps Script → Triggers → Add → onChange (to catch all edits)
+9. Restrict the Google Maps API key in Google Cloud Console to the Netlify site domain
+10. Run the workflow manually once (`workflow_dispatch`) to verify
 
 ### Design decisions
 - **GitHub Actions over Google Apps Script for the pipeline**: The existing Python
   scripts work as-is, no porting needed. No 6-minute execution limit concerns.
-  GitHub Actions provides 2,000 free minutes/month for public repos.
-- **GitHub Pages over Google Drive**: More reliable HTML rendering, cleaner URLs,
-  no Google Drive viewer quirks. Public access without any login.
+  GitHub Actions provides 2,000 free minutes/month for private repos.
+- **Netlify over GitHub Pages**: GitHub Pages requires a public repo or GitHub
+  Enterprise for private repos. Netlify works with private repos on the free tier,
+  provides clean public URLs, and requires no login to view.
 - **Sheet exported as CSV**: The Google Sheet must be shared as "Anyone with the
   link can view". The export URL requires no API key or OAuth.
 - **geocoded_cache.json committed to repo**: Persists geocoding results across
@@ -245,12 +252,14 @@ changes by other users. For those, use an **installable** onChange trigger
 
 ### TODO — Phase 2 (cloud deployment)
 - [x] Create GitHub Actions workflow (.github/workflows/deploy.yml)
-- [ ] Add GitHub repo secrets (GOOGLE_MAPS_API_KEY, GOOGLE_SHEET_ID)
-- [ ] Enable GitHub Pages (gh-pages branch)
+- [x] Switch from GitHub Pages to Netlify (private repo compatibility)
+- [ ] Create Netlify account and site
+- [ ] Generate Netlify personal access token
+- [ ] Add GitHub repo secrets (GOOGLE_MAPS_API_KEY, GOOGLE_SHEET_ID, NETLIFY_AUTH_TOKEN, NETLIFY_SITE_ID)
 - [ ] Create GitHub PAT for Apps Script webhook
 - [ ] Set up Google Apps Script onEdit trigger on the Google Sheet
 - [ ] Add installable onChange trigger in Apps Script
-- [ ] Restrict Google Maps API key to GitHub Pages domain
+- [ ] Restrict Google Maps API key to Netlify site domain
 - [ ] Run workflow manually to verify end-to-end
 - [ ] Test onEdit trigger → webhook → deploy flow
 
@@ -289,6 +298,15 @@ changes by other users. For those, use an **installable** onChange trigger
   are treated as single letters. Roman numeral streets sort as a separate numeric group
   before alphabetical entries.
 
+### 2026-03-03 — Switch hosting from GitHub Pages to Netlify
+- **CHANGED**: Replaced GitHub Pages deploy with Netlify deploy in workflow.
+  GitHub Pages requires a public repo or Enterprise plan for private repos.
+  Netlify free tier works with private repos and provides the same public URL
+  functionality. Deploy now uses `netlify-cli` instead of `peaceiris/actions-gh-pages`.
+- **ADDED**: Two new GitHub repo secrets: `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID`.
+- **REMOVED**: `peaceiris/actions-gh-pages` action and `gh-pages` branch dependency.
+- **DOCS**: Updated spec.md and progress.txt to reflect Netlify hosting.
+
 ### 2026-02-28 — Phase 2: Cloud deployment setup
 - **ADDED**: `.github/workflows/deploy.yml` — GitHub Actions workflow that:
   - Downloads Google Sheet as CSV via public export URL
@@ -319,7 +337,7 @@ changes by other users. For those, use an **installable** onChange trigger
 - generate_map.py                    — Step 3: read cache → index.html
 - index.html                         — output map (created by generate_map.py)
 - run.sh                             — runs all 3 steps in sequence (local use)
-- .github/workflows/deploy.yml       — GitHub Actions: download sheet → pipeline → deploy
+- .github/workflows/deploy.yml       — GitHub Actions: download sheet → pipeline → deploy to Netlify
 - .env                               — local env vars (GOOGLE_MAPS_API_KEY) [gitignored]
 - spec.md                            — project specification
 - progress.txt                       — this file
