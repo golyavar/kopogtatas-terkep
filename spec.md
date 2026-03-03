@@ -7,7 +7,7 @@ The map must auto-update whenever the input Google Sheet is edited.
 
 ---
 
-## Phase 1 — Local (current focus)
+## Phase 1 — Local (DONE)
 
 Build and test the full pipeline locally using input.csv as the data source.
 
@@ -57,21 +57,31 @@ python generate_map.py
 
 ---
 
-## Phase 2 — Cloud deployment (GitHub Actions + Netlify)
+## Phase 2 — Cloud deployment (DONE — GitHub Actions + Netlify)
+
+### Status: FULLY OPERATIONAL
+The end-to-end auto-update flow is working:
+1. User edits Google Sheet
+2. Apps Script onChange trigger fires → sends webhook to GitHub
+3. GitHub Actions downloads sheet, runs pipeline, commits results
+4. Push to main → Netlify auto-deploys updated map
 
 ### Overview
 - Google Sheet is the data source (shared as "Anyone with the link can view")
-- Google Apps Script `onEdit` trigger sends a webhook to GitHub Actions
-- GitHub Actions downloads the sheet as CSV, runs the Python pipeline, deploys to Netlify
+- Google Apps Script installable `onChange` trigger sends a webhook to GitHub Actions
+- GitHub Actions downloads the sheet as CSV, runs the Python pipeline, commits to main
+- Netlify auto-deploys on push to main
 - Map is publicly accessible at the Netlify site URL (no login needed)
 - GitHub repo stays **private** (Netlify works with private repos, unlike GitHub Pages free tier)
+- Any editor of the Google Sheet triggers an update (not just the owner)
 
 ### GitHub Actions workflow (`.github/workflows/deploy.yml`)
 - Triggers: `repository_dispatch` (from Apps Script webhook) + `workflow_dispatch` (manual)
 - Downloads Google Sheet as CSV: `https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv`
 - Runs: `convert_addresses.py` → `geocode.py` → `generate_map.py`
-- Commits updated `geocoded_cache.json` to main (cache persists across runs)
-- Commits updated `index.html` to main → Netlify auto-deploys on push
+- Commits updated `geocoded_cache.json` and `index.html` to main
+- Cleans up intermediate files (input.csv, address_list.csv) before pull to avoid rebase conflicts
+- Netlify auto-deploys on push (no netlify-cli or Netlify secrets needed)
 
 ### Google Apps Script (bound to the Google Sheet)
 ```javascript
@@ -91,7 +101,8 @@ function onEdit(e) {
   );
 }
 ```
-Note: Use an **installable** onChange trigger for edits by other users.
+Note: Must use an **installable** onChange trigger (not simple onEdit) so it fires
+for all editors, not just the script owner. Set up via Apps Script → Triggers → Add Trigger.
 
 ### Required secrets
 | Secret | Where | Purpose |
