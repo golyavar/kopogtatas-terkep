@@ -71,7 +71,7 @@ python generate_map.py
 - Downloads Google Sheet as CSV: `https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv`
 - Runs: `convert_addresses.py` → `geocode.py` → `generate_map.py`
 - Commits updated `geocoded_cache.json` to main (cache persists across runs)
-- Deploys `index.html` to Netlify via `netlify-cli`
+- Commits updated `index.html` to main → Netlify auto-deploys on push
 
 ### Google Apps Script (bound to the Google Sheet)
 ```javascript
@@ -98,22 +98,17 @@ Note: Use an **installable** onChange trigger for edits by other users.
 |--------|-------|---------|
 | `GOOGLE_MAPS_API_KEY` | GitHub repo secret | Geocoding + Maps JS API |
 | `GOOGLE_SHEET_ID` | GitHub repo secret | Identifies the source sheet |
-| `NETLIFY_AUTH_TOKEN` | GitHub repo secret | Netlify deploy token |
-| `NETLIFY_SITE_ID` | GitHub repo secret | Netlify site identifier |
 | `GITHUB_PAT` | Google Apps Script property | Auth for webhook |
 
 ### Setup steps
-1. Create a free Netlify account at https://app.netlify.com
-2. Create a new site (manually, no git integration needed) → note the Site ID
-3. Generate a Netlify personal access token: User Settings → Applications → Personal access tokens
-4. GitHub repo → Settings → Secrets → add `GOOGLE_MAPS_API_KEY`, `GOOGLE_SHEET_ID`,
-   `NETLIFY_AUTH_TOKEN`, and `NETLIFY_SITE_ID`
-5. Create a GitHub PAT (fine-grained, repo scope for this repo only)
-6. Google Sheet → Extensions → Apps Script → paste the onEdit function above
-7. Apps Script → Project Settings → Script Properties → add `GITHUB_PAT`
-8. Apps Script → Triggers → Add → onChange (installable, catches all edits)
-9. Restrict Google Maps API key to the Netlify site domain in Google Cloud Console
-10. Run workflow manually once (`workflow_dispatch`) to verify
+1. Create a free Netlify account and connect the GitHub repo (Netlify auto-deploys on push)
+2. GitHub repo → Settings → Secrets → add `GOOGLE_MAPS_API_KEY` and `GOOGLE_SHEET_ID`
+3. Create a GitHub PAT (fine-grained, repo scope for this repo only)
+4. Google Sheet → Extensions → Apps Script → paste the onEdit function above
+5. Apps Script → Project Settings → Script Properties → add `GITHUB_PAT`
+6. Apps Script → Triggers → Add → onChange (installable, catches all edits)
+7. Restrict Google Maps API key to the Netlify site domain in Google Cloud Console
+8. Run workflow manually once (`workflow_dispatch`) to verify
 
 ---
 

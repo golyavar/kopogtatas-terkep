@@ -1,4 +1,4 @@
-name: Update map and deploy to Netlify
+name: Update map from Google Sheet
 
 on:
   repository_dispatch:
@@ -33,20 +33,11 @@ jobs:
           python geocode.py
           python generate_map.py
 
-      - name: Commit updated cache
+      - name: Commit and push updated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add geocoded_cache.json
-          git diff --cached --quiet || git commit -m "Update geocoded cache"
+          git add geocoded_cache.json index.html
+          git diff --cached --quiet || git commit -m "Update map from Google Sheet"
           git pull --rebase origin main
           git push
-
-      - name: Install Netlify CLI
-        run: npm install -g netlify-cli
-
-      - name: Deploy to Netlify
-        run: |
-          mkdir -p _site
-          cp index.html _site/
-          netlify deploy --prod --dir=_site --site=${{ secrets.NETLIFY_SITE_ID }} --auth=${{ secrets.NETLIFY_AUTH_TOKEN }}
