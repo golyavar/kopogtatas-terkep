@@ -43,12 +43,16 @@ jobs:
           git diff --cached --quiet || git commit -m "Update geocoded cache"
           git push
 
+      - name: Prepare deploy directory
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp geocoded_cache.json _site/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./_site
           publish_branch: gh-pages
-          keep_files: false
           force_orphan: true
-          exclude_assets: ".github,__pycache__,.env,.git,*.py,run.sh,spec.md,progress.txt,*.csv,*.pyc"
