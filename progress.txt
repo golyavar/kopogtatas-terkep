@@ -135,8 +135,8 @@ Google Sheet (edited by user)
     ├─ python convert_addresses.py
     ├─ python geocode.py          (uses GOOGLE_MAPS_API_KEY secret)
     ├─ python generate_map.py     (uses GOOGLE_MAPS_API_KEY secret)
-    ├─ Commit updated geocoded_cache.json to main
-    └─ Deploy index.html to Netlify via netlify-cli
+    ├─ Commit updated geocoded_cache.json + index.html to main
+    └─ Push to main → Netlify auto-deploys
     │
     ▼
 https://<site-name>.netlify.app/
@@ -249,13 +249,23 @@ changes by other users. For those, use an **installable** onChange trigger
 - [x] Create GitHub Actions workflow (.github/workflows/deploy.yml)
 - [x] Switch from GitHub Pages to Netlify (private repo compatibility)
 - [x] Create Netlify account and connect repo (auto-deploys on push)
-- [ ] Add GitHub repo secrets (GOOGLE_MAPS_API_KEY, GOOGLE_SHEET_ID)
-- [ ] Create GitHub PAT for Apps Script webhook
-- [ ] Set up Google Apps Script onEdit trigger on the Google Sheet
-- [ ] Add installable onChange trigger in Apps Script
-- [ ] Restrict Google Maps API key to Netlify site domain
+- [x] Netlify site live and serving index.html
+- [ ] Add GitHub repo secrets (GOOGLE_MAPS_API_KEY, GOOGLE_SHEET_ID) ← USER ACTION
+- [ ] Create GitHub PAT for Apps Script webhook ← USER ACTION
+- [ ] Set up Google Apps Script onEdit trigger on the Google Sheet ← USER ACTION
+- [ ] Add installable onChange trigger in Apps Script ← USER ACTION
+- [ ] Restrict Google Maps API key to Netlify site domain ← USER ACTION
 - [ ] Run workflow manually to verify end-to-end
 - [ ] Test onEdit trigger → webhook → deploy flow
+
+### NEXT STEPS FOR NEW AGENT
+The pipeline code and CI/CD workflow are complete. All remaining tasks are
+manual user setup (marked USER ACTION above). When the user has completed
+those steps, the next agent should:
+1. Help the user trigger the workflow manually to test end-to-end
+2. Debug any workflow failures (check `gh run list` / `gh run view`)
+3. Help test the Apps Script → webhook → workflow → Netlify deploy flow
+4. Verify the map updates correctly on the Netlify URL after a sheet edit
 
 ---
 
@@ -332,7 +342,7 @@ changes by other users. For those, use an **installable** onChange trigger
 - generate_map.py                    — Step 3: read cache → index.html
 - index.html                         — output map (created by generate_map.py)
 - run.sh                             — runs all 3 steps in sequence (local use)
-- .github/workflows/deploy.yml       — GitHub Actions: download sheet → pipeline → deploy to Netlify
+- .github/workflows/deploy.yml       — GitHub Actions: download sheet → pipeline → commit → Netlify auto-deploys
 - .env                               — local env vars (GOOGLE_MAPS_API_KEY) [gitignored]
 - spec.md                            — project specification
 - progress.txt                       — this file

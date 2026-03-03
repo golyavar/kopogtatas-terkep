@@ -162,7 +162,7 @@ Rows with empty Házszámok are skipped (these are streets without specific hous
 - generate_map.py                    — Step 3: reads cache, produces index.html
 - index.html                         — output map (created by generate_map.py)
 - run.sh                             — runs all 3 steps in sequence (local use)
-- .github/workflows/deploy.yml       — GitHub Actions: download sheet → pipeline → deploy to Netlify
+- .github/workflows/deploy.yml       — GitHub Actions: download sheet → pipeline → commit → Netlify auto-deploys
 - .env                               — local env vars (GOOGLE_MAPS_API_KEY) [gitignored]
 - spec.md                            — project specification (this file)
 - progress.txt                       — detailed progress tracking, architecture notes, and changelog
