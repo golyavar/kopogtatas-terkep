@@ -2470,5 +2470,237 @@
   "Zrínyi utca 8, Dombóvár, Hungary": {
     "lat": 46.38012029999999,
     "lon": 18.1298095
+  },
+  "Árvácska utca 1, Dombóvár, Hungary": {
+    "lat": 46.3823375,
+    "lon": 18.11588
+  },
+  "Árvácska utca 3, Dombóvár, Hungary": {
+    "lat": 46.3824694,
+    "lon": 18.1158157
+  },
+  "Árvácska utca 5, Dombóvár, Hungary": {
+    "lat": 46.38258,
+    "lon": 18.1157355
+  },
+  "Árvácska utca 7, Dombóvár, Hungary": {
+    "lat": 46.3826893,
+    "lon": 18.1156323
+  },
+  "Árvácska utca 9, Dombóvár, Hungary": {
+    "lat": 46.3828202,
+    "lon": 18.115517
+  },
+  "Árvácska utca 11, Dombóvár, Hungary": {
+    "lat": 46.3829187,
+    "lon": 18.1154453
+  },
+  "Árvácska utca 13, Dombóvár, Hungary": {
+    "lat": 46.3829566,
+    "lon": 18.1154177
+  },
+  "Árvácska utca 15, Dombóvár, Hungary": {
+    "lat": 46.3831638,
+    "lon": 18.1152742
+  },
+  "Árvácska utca 17, Dombóvár, Hungary": {
+    "lat": 46.3832823,
+    "lon": 18.1151935
+  },
+  "Árvácska utca 2, Dombóvár, Hungary": {
+    "lat": 46.3824918,
+    "lon": 18.1162911
+  },
+  "Árvácska utca 4, Dombóvár, Hungary": {
+    "lat": 46.3823618,
+    "lon": 18.1164588
+  },
+  "Árvácska utca 6, Dombóvár, Hungary": {
+    "lat": 46.382717,
+    "lon": 18.1161359
+  },
+  "Árvácska utca 8, Dombóvár, Hungary": {
+    "lat": 46.3828286,
+    "lon": 18.1160365
+  },
+  "Árvácska utca 10, Dombóvár, Hungary": {
+    "lat": 46.3829814,
+    "lon": 18.1159399
+  },
+  "Árvácska utca 12, Dombóvár, Hungary": {
+    "lat": 46.3830903,
+    "lon": 18.1158553
+  },
+  "Árvácska utca 14, Dombóvár, Hungary": {
+    "lat": 46.38320299999999,
+    "lon": 18.1157845
+  },
+  "Árvácska utca 16, Dombóvár, Hungary": {
+    "lat": 46.3833321,
+    "lon": 18.1157423
+  },
+  "Árvácska utca 18, Dombóvár, Hungary": {
+    "lat": 46.383426,
+    "lon": 18.1156254
+  },
+  "Búzavirág utca 2, Dombóvár, Hungary": {
+    "lat": 46.3846225,
+    "lon": 18.1182435
+  },
+  "Búzavirág utca 4, Dombóvár, Hungary": {
+    "lat": 46.3854123,
+    "lon": 18.1205383
+  },
+  "Búzavirág utca 6, Dombóvár, Hungary": {
+    "lat": 46.38534139999999,
+    "lon": 18.120367
+  },
+  "Búzavirág utca 8, Dombóvár, Hungary": {
+    "lat": 46.3852688,
+    "lon": 18.1202476
+  },
+  "Búzavirág utca 10, Dombóvár, Hungary": {
+    "lat": 46.3852535,
+    "lon": 18.12015
+  },
+  "Búzavirág utca 12, Dombóvár, Hungary": {
+    "lat": 46.3852092,
+    "lon": 18.1199994
+  },
+  "Búzavirág utca 14, Dombóvár, Hungary": {
+    "lat": 46.385137,
+    "lon": 18.119839
+  },
+  "Búzavirág utca 16, Dombóvár, Hungary": {
+    "lat": 46.3850924,
+    "lon": 18.1196713
+  },
+  "Búzavirág utca 18, Dombóvár, Hungary": {
+    "lat": 46.384998,
+    "lon": 18.119439
+  },
+  "Búzavirág utca 20, Dombóvár, Hungary": {
+    "lat": 46.384925,
+    "lon": 18.1191927
+  },
+  "Búzavirág utca 22, Dombóvár, Hungary": {
+    "lat": 46.3848856,
+    "lon": 18.119012
+  },
+  "Búzavirág utca 24, Dombóvár, Hungary": {
+    "lat": 46.3847776,
+    "lon": 18.1187866
+  },
+  "Búzavirág utca 26, Dombóvár, Hungary": {
+    "lat": 46.3847611,
+    "lon": 18.118676
+  },
+  "Búzavirág utca 28, Dombóvár, Hungary": {
+    "lat": 46.3846686,
+    "lon": 18.1184064
+  },
+  "Búzavirág utca 30, Dombóvár, Hungary": {
+    "lat": 46.3846469,
+    "lon": 18.118342
+  },
+  "Búzavirág utca 32, Dombóvár, Hungary": {
+    "lat": 46.3846007,
+    "lon": 18.1181798
+  },
+  "Búzavirág utca 34, Dombóvár, Hungary": {
+    "lat": 46.384563,
+    "lon": 18.1180174
+  },
+  "Búzavirág utca 36, Dombóvár, Hungary": {
+    "lat": 46.3845035,
+    "lon": 18.1178683
+  },
+  "Búzavirág utca 38, Dombóvár, Hungary": {
+    "lat": 46.3844376,
+    "lon": 18.1177197
+  },
+  "Búzavirág utca 40, Dombóvár, Hungary": {
+    "lat": 46.3843827,
+    "lon": 18.1175555
+  },
+  "Búzavirág utca 42, Dombóvár, Hungary": {
+    "lat": 46.3843326,
+    "lon": 18.1173841
+  },
+  "Búzavirág utca 44, Dombóvár, Hungary": {
+    "lat": 46.3842991,
+    "lon": 18.1172408
+  },
+  "Búzavirág utca 46, Dombóvár, Hungary": {
+    "lat": 46.3842818,
+    "lon": 18.1171894
+  },
+  "Búzavirág utca 48, Dombóvár, Hungary": {
+    "lat": 46.3842249,
+    "lon": 18.1170594
+  },
+  "Búzavirág utca 50, Dombóvár, Hungary": {
+    "lat": 46.384109,
+    "lon": 18.1167241
+  },
+  "Búzavirág utca 52, Dombóvár, Hungary": {
+    "lat": 46.3840848,
+    "lon": 18.1165435
+  },
+  "Búzavirág utca 54, Dombóvár, Hungary": {
+    "lat": 46.3840061,
+    "lon": 18.1163914
+  },
+  "Búzavirág utca 56, Dombóvár, Hungary": {
+    "lat": 46.38388399999999,
+    "lon": 18.116273
+  },
+  "Búzavirág utca 58, Dombóvár, Hungary": {
+    "lat": 46.3838929,
+    "lon": 18.11608
+  },
+  "Búzavirág utca 60, Dombóvár, Hungary": {
+    "lat": 46.3838365,
+    "lon": 18.1159166
+  },
+  "Búzavirág utca 62, Dombóvár, Hungary": {
+    "lat": 46.3837828,
+    "lon": 18.1157549
+  },
+  "Búzavirág utca 64, Dombóvár, Hungary": {
+    "lat": 46.3837254,
+    "lon": 18.1155919
+  },
+  "Búzavirág utca 66, Dombóvár, Hungary": {
+    "lat": 46.3836666,
+    "lon": 18.1154437
+  },
+  "Búzavirág utca 68, Dombóvár, Hungary": {
+    "lat": 46.3836105,
+    "lon": 18.1152751
+  },
+  "Búzavirág utca 70, Dombóvár, Hungary": {
+    "lat": 46.3835685,
+    "lon": 18.115098
+  },
+  "Búzavirág utca 72, Dombóvár, Hungary": {
+    "lat": 46.3835103,
+    "lon": 18.1149325
+  },
+  "Búzavirág utca 74, Dombóvár, Hungary": {
+    "lat": 46.3834413,
+    "lon": 18.1147812
+  },
+  "Búzavirág utca 76, Dombóvár, Hungary": {
+    "lat": 46.38337990000001,
+    "lon": 18.1146114
+  },
+  "Búzavirág utca 78, Dombóvár, Hungary": {
+    "lat": 46.3833299,
+    "lon": 18.1144519
+  },
+  "Búzavirág utca 80, Dombóvár, Hungary": {
+    "lat": 46.3832966,
+    "lon": 18.1142815
   }
 }
