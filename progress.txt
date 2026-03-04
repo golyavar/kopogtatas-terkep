@@ -256,7 +256,7 @@ changes by other users. For those, use an **installable** onChange trigger
 - [x] Run workflow manually to verify end-to-end (workflow_dispatch) ✓
 - [x] Test onChange trigger → webhook → deploy flow ✓
 - [x] Fix CI bug: clean unstaged intermediate files before git pull --rebase
-- [ ] Restrict Google Maps API key to GitHub Pages domain (optional hardening)
+- [x] Restrict Google Maps API key to GitHub Pages domain (optional hardening)
 
 ### CURRENT STATUS
 **The project is fully operational.** The entire auto-update flow works:
@@ -268,13 +268,17 @@ The project is complete and running. Possible future improvements:
    Requires updating one line in convert_addresses.py (line 133: `row.get("Házszámok"` → `row.get("Bejárt házszámok"`).
    Do this during off-hours since the live site is in use by the team. Rename the Sheet column
    and deploy the code change at the same time.
-2. **API key restriction** — Restrict the Google Maps API key to `golyavar.github.io` in Google Cloud Console (security hardening, not required for functionality)
-2. **Map improvements** — Search, filtering by city, color-coding by Oldal. Note: MarkerClusterer
+2. ~~**API key restriction**~~ — DONE. Google Maps API key restricted to `golyavar.github.io` in Google Cloud Console.
+3. **Map improvements** — Search, filtering by city. Note: MarkerClusterer
    was tested and rejected (user prefers seeing individual house coverage). Heatmap was also
-   tested and rejected (looked like density, not individual coverage).
-3. **Megjegyzés (notes) column** — Currently not shown in pin popups; could be added
+   tested and rejected (looked like density, not individual coverage). Color-coding by Oldal
+   was considered and rejected (not useful).
 4. **Error monitoring** — The onChange trigger fires on every edit, even non-data edits; could add debouncing or change detection
-5. **Multiple sheets** — If the Google Sheet has multiple tabs, the CSV export only gets the first one
+5. **Multi-town support** — Generate separate maps for different towns. Could work via
+   multiple sheets/tabs in the same Google Sheet (one per town) or entirely separate
+   Google Sheets. Each town would get its own map page (e.g. `/dombovar/`, `/kaposvar/`).
+   Requires generalizing the pipeline to iterate over towns instead of being hardcoded
+   to a single sheet/bounding box.
 
 ---
 
