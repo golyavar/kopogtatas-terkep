@@ -74,6 +74,7 @@ def main():
           position: {{ lat: pin.lat, lng: pin.lon }},
           map: map,
           icon: houseIcon,
+          optimized: true,
         }});
         marker.addListener('click', function() {{
           infoWindow.setContent(pin.address);
