@@ -4646,5 +4646,41 @@
   "Vörösmarty utca 42, Dombóvár, Hungary": {
     "lat": 46.379003,
     "lon": 18.136622
+  },
+  "Gyár utca 1, Dombóvár, Hungary": {
+    "lat": 46.373986,
+    "lon": 18.1402613
+  },
+  "Gyár utca 3, Dombóvár, Hungary": {
+    "lat": 46.3740687,
+    "lon": 18.1406643
+  },
+  "Gyár utca 5, Dombóvár, Hungary": {
+    "lat": 46.3741145,
+    "lon": 18.1411044
+  },
+  "Gyár utca 2, Dombóvár, Hungary": {
+    "lat": 46.3743561,
+    "lon": 18.1401948
+  },
+  "Gyár utca 4, Dombóvár, Hungary": {
+    "lat": 46.3743664,
+    "lon": 18.1404697
+  },
+  "Gyár utca 6, Dombóvár, Hungary": {
+    "lat": 46.3745029,
+    "lon": 18.1407043
+  },
+  "Gyár utca 8, Dombóvár, Hungary": {
+    "lat": 46.3744471,
+    "lon": 18.1412174
+  },
+  "Gyár utca 10, Dombóvár, Hungary": {
+    "lat": 46.3744582,
+    "lon": 18.141488
+  },
+  "Gyár utca 12, Dombóvár, Hungary": {
+    "lat": 46.374521,
+    "lon": 18.142301
   }
 }
