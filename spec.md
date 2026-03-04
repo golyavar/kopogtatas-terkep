@@ -170,6 +170,7 @@ Rows with empty Házszámok are skipped (these are streets without specific hous
 
 ## Existing files
 - input.csv                          — source address data [gitignored, downloaded from Sheet in CI]
+- README.md                          — project overview (English)
 - convert_addresses.py               — Step 1: expands ranges, respects Oldal, produces address_list.csv
 - address_list.csv                   — expanded address list
 - geocode.py                         — Step 2: reads address_list.csv, geocodes via Google API, produces cache

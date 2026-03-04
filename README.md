@@ -1,27 +1,27 @@
-# Kopogtatás térkép
+# Knocking Map (Kopogtatás térkép)
 
-Interaktív térkép, amely egy Google Sheet-ből származó címeket jelenít meg a térképen.
+Interactive map showing door-to-door canvassing addresses in Dombóvár, Hungary. Auto-updates from a Google Sheet via GitHub Actions.
 
-**Térkép megtekintése:** https://golyavar.github.io/kopogtatas-terkep/
+**View the map:** https://golyavar.github.io/kopogtatas-terkep/
 
 **Google Sheet:** https://docs.google.com/spreadsheets/d/1N6Pv3u-4E8ZwFY6aySRjl4i0qtVu5IAgLrHLxN1Hww4/edit?gid=1244607183#gid=1244607183
 
-## Működés
+## How it works
 
-1. A Google Sheet-ben szerkesztés történik
-2. Google Apps Script webhook-ot küld a GitHub-nak
-3. GitHub Actions letölti a táblázatot, futtatja a feldolgozó pipeline-t
-4. Az eredmény automatikusan megjelenik a térképen
+1. An address is edited in the Google Sheet
+2. Google Apps Script sends a webhook to GitHub
+3. GitHub Actions downloads the sheet and runs the processing pipeline
+4. The updated map is automatically deployed to GitHub Pages
 
-## Helyi futtatás
+## Local setup
 
 ```
-cp .env.example .env  # GOOGLE_MAPS_API_KEY beállítása
+cp .env.example .env  # Set GOOGLE_MAPS_API_KEY
 ./run.sh
 ```
 
 ## Pipeline
 
-- `convert_addresses.py` — címek kibontása (házszámtartományok, páros/páratlan szűrés)
-- `geocode.py` — geokódolás Google Maps API-val (cache-elve)
-- `generate_map.py` — `index.html` generálása az összes jelölővel
+- `convert_addresses.py` — Expand address ranges, filter by side (odd/even)
+- `geocode.py` — Geocode addresses via Google Maps API (cached)
+- `generate_map.py` — Generate `index.html` with all map markers

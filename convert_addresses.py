@@ -3,19 +3,19 @@ import re
 import sys
 import os
 
-def expand_numbers(házszámok_str, oldal=None):
+def expand_numbers(house_numbers_str, side=None):
     """Expand '1-13, 17, 2A, 6-8' into individual house numbers.
 
     Args:
-        házszámok_str: Comma-separated house numbers/ranges (e.g. "1-13, 17").
-        oldal: Optional side filter — "páratlan" keeps only odd numbers,
-               "páros" keeps only even numbers. Non-numeric entries (e.g. "2A")
-               are always kept regardless of oldal.
+        house_numbers_str: Comma-separated house numbers/ranges (e.g. "1-13, 17").
+        side: Optional side filter — "páratlan" keeps only odd numbers,
+              "páros" keeps only even numbers. Non-numeric entries (e.g. "2A")
+              are always kept regardless of side.
     """
-    if not házszámok_str or not házszámok_str.strip():
+    if not house_numbers_str or not house_numbers_str.strip():
         return []
     results = []
-    parts = [p.strip() for p in házszámok_str.split(',')]
+    parts = [p.strip() for p in house_numbers_str.split(',')]
     for part in parts:
         if not part:
             continue
@@ -23,9 +23,9 @@ def expand_numbers(házszámok_str, oldal=None):
         if range_match:
             start, end = int(range_match.group(1)), int(range_match.group(2))
             for n in range(start, end + 1):
-                if oldal == 'páratlan' and n % 2 == 0:
+                if side == 'páratlan' and n % 2 == 0:
                     continue
-                if oldal == 'páros' and n % 2 == 1:
+                if side == 'páros' and n % 2 == 1:
                     continue
                 results.append(str(n))
         else:
@@ -114,15 +114,15 @@ def sort_key(row):
                 utca_key = (1, hungarian_sort_key(utca), 0)
 
     # Sort house number numerically (non-numeric like "2A" sorts after pure numbers)
-    házszám = row["Házszám"]
-    num_match = re.match(r'^(\d+)', házszám)
-    házszám_num = int(num_match.group(1)) if num_match else float('inf')
+    house_number = row["Házszám"]
+    num_match = re.match(r'^(\d+)', house_number)
+    house_number_num = int(num_match.group(1)) if num_match else float('inf')
 
     # páratlan (odd) sorts before páros (even)
-    oldal_order = 0 if row.get("Oldal") == "páratlan" else 1
+    side_order = 0 if row.get("Oldal") == "páratlan" else 1
 
     return (hungarian_sort_key(row["Település"]), utca_key,
-            oldal_order, házszám_num, házszám)
+            side_order, house_number_num, house_number)
 
 
 def expand_addresses(input_file, output_file):
@@ -130,15 +130,15 @@ def expand_addresses(input_file, output_file):
 
     with open(input_file, "r", encoding="utf-8-sig") as f:
         for row in csv.DictReader(f):
-            házszámok = row.get("Házszámok", "").strip()
-            if not házszámok:
+            house_numbers = row.get("Házszámok", "").strip()
+            if not house_numbers:
                 continue
-            oldal = row.get("Oldal", "").strip()
-            for num in expand_numbers(házszámok, oldal):
+            side = row.get("Oldal", "").strip()
+            for num in expand_numbers(house_numbers, side):
                 rows_out.append({
                     "Település": row["Település"],
                     "Utca": row["Utca"],
-                    "Oldal": oldal,
+                    "Oldal": side,
                     "Házszám": num,
                     "Teljes cím": f"{row['Utca']} {num}, {row['Település']}, Hungary",
                     "Megjegyzés": row.get("Megjegyzés", "")
