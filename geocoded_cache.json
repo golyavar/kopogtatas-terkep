@@ -4318,5 +4318,113 @@
   "Bezerédj utca 20, Dombóvár, Hungary": {
     "lat": 46.37824680000001,
     "lon": 18.1342559
+  },
+  "Vörösmarty utca 1, Dombóvár, Hungary": {
+    "lat": 46.3748884,
+    "lon": 18.1371227
+  },
+  "Vörösmarty utca 3, Dombóvár, Hungary": {
+    "lat": 46.37501950000001,
+    "lon": 18.1371469
+  },
+  "Vörösmarty utca 5, Dombóvár, Hungary": {
+    "lat": 46.3754074,
+    "lon": 18.1371619
+  },
+  "Vörösmarty utca 7, Dombóvár, Hungary": {
+    "lat": 46.3756046,
+    "lon": 18.137056
+  },
+  "Vörösmarty utca 9, Dombóvár, Hungary": {
+    "lat": 46.3757466,
+    "lon": 18.137439
+  },
+  "Vörösmarty utca 11, Dombóvár, Hungary": {
+    "lat": 46.3756097,
+    "lon": 18.1371089
+  },
+  "Vörösmarty utca 13, Dombóvár, Hungary": {
+    "lat": 46.3760863,
+    "lon": 18.137139
+  },
+  "Vörösmarty utca 15, Dombóvár, Hungary": {
+    "lat": 46.3759082,
+    "lon": 18.1371448
+  },
+  "Vörösmarty utca 17, Dombóvár, Hungary": {
+    "lat": 46.3764995,
+    "lon": 18.1372111
+  },
+  "Vörösmarty utca 19, Dombóvár, Hungary": {
+    "lat": 46.376604,
+    "lon": 18.1371025
+  },
+  "Vörösmarty utca 21, Dombóvár, Hungary": {
+    "lat": 46.3767134,
+    "lon": 18.1371006
+  },
+  "Vörösmarty utca 23, Dombóvár, Hungary": {
+    "lat": 46.3768794,
+    "lon": 18.1371123
+  },
+  "Vörösmarty utca 25, Dombóvár, Hungary": {
+    "lat": 46.3767138,
+    "lon": 18.137106
+  },
+  "Vörösmarty utca 27, Dombóvár, Hungary": {
+    "lat": 46.3771181,
+    "lon": 18.1371409
+  },
+  "Vörösmarty utca 29, Dombóvár, Hungary": {
+    "lat": 46.37720640000001,
+    "lon": 18.1370658
+  },
+  "Vörösmarty utca 31, Dombóvár, Hungary": {
+    "lat": 46.3772604,
+    "lon": 18.1371791
+  },
+  "Vörösmarty utca 33, Dombóvár, Hungary": {
+    "lat": 46.3774911,
+    "lon": 18.1371085
+  },
+  "Vörösmarty utca 2, Dombóvár, Hungary": {
+    "lat": 46.3762695,
+    "lon": 18.1366463
+  },
+  "Vörösmarty utca 4, Dombóvár, Hungary": {
+    "lat": 46.3764271,
+    "lon": 18.1366225
+  },
+  "Vörösmarty utca 6, Dombóvár, Hungary": {
+    "lat": 46.37660260000001,
+    "lon": 18.1366668
+  },
+  "Vörösmarty utca 8, Dombóvár, Hungary": {
+    "lat": 46.3766892,
+    "lon": 18.1366646
+  },
+  "Vörösmarty utca 10, Dombóvár, Hungary": {
+    "lat": 46.3768405,
+    "lon": 18.1367477
+  },
+  "Vörösmarty utca 12, Dombóvár, Hungary": {
+    "lat": 46.37690480000001,
+    "lon": 18.136746
+  },
+  "Vörösmarty utca 14, Dombóvár, Hungary": {
+    "lat": 46.3765371,
+    "lon": 18.1367138
+  },
+  "Vörösmarty utca 16, Dombóvár, Hungary": {
+    "lat": 46.3772465,
+    "lon": 18.136723
+  },
+  "Vörösmarty utca 18, Dombóvár, Hungary": {
+    "lat": 46.37729419999999,
+    "lon": 18.1367203
+  },
+  "Vörösmarty utca 20, Dombóvár, Hungary": {
+    "lat": 46.377583,
+    "lon": 18.1367193
   }
 }
