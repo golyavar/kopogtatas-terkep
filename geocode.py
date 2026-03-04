@@ -62,6 +62,16 @@ def main():
     print(f"Total addresses: {len(addresses)}")
 
     cache = load_cache()
+
+    # Remove cached entries that are no longer in the address list
+    address_set = set(addresses)
+    stale = [a for a in cache if a not in address_set]
+    if stale:
+        for a in stale:
+            del cache[a]
+        save_cache(cache)
+        print(f"Removed {len(stale)} stale address(es) from cache.")
+
     pending = [a for a in addresses if a not in cache]
     print(f"Already cached: {len(cache)}  |  To geocode: {len(pending)}")
 
