@@ -24,16 +24,16 @@ Build and test the full pipeline locally using input.csv as the data source.
 - Roman numeral street names (e.g. "III. utca") sort numerically after digit-prefixed, before alphabetical streets
 
 Input:  input.csv
-Output: address_list.csv (the expanded address list — becomes a Google Sheet in Phase 2)
+Output: address_list.csv (temporary, not committed — only used as input for geocode.py)
 
 ### Step 2: geocode.py
 - Read address_list.csv (produced by Step 1)
 - Deduplicate addresses
 - Load geocoded_cache.json (create if missing)
-- For each address not already in the cache: call Nominatim API to get lat/lon
+- Prune stale entries from cache (addresses no longer in address_list.csv)
+- For each address not already in the cache: call Google Geocoding API to get lat/lon
 - Save the updated geocoded_cache.json after each address (so progress isn't lost on crash)
-- Skip addresses Nominatim cannot resolve (log them, don't crash)
-- Respect Nominatim's rate limit: 1 request/second, include a User-Agent header
+- Skip addresses the API cannot resolve (log them, don't crash)
 
 Input:  address_list.csv
 Output: geocoded_cache.json
@@ -164,7 +164,7 @@ Rows with empty Házszámok are skipped (these are streets without specific hous
 - Pin popup content: full address (Megjegyzés not shown for now)
 - All pin data embedded as a JS array in the HTML (no runtime geocoding calls)
 - Must be a single self-contained file a non-technical user can open via one link
-- Initial view: fitted to Dombóvár bounding box (46.370–46.389°N, 18.121–18.166°E)
+- Initial view: fitted to Dombóvár bounding box (46.370–46.389°N, 18.121–18.160°E)
 
 ---
 
@@ -172,8 +172,7 @@ Rows with empty Házszámok are skipped (these are streets without specific hous
 - input.csv                          — source address data [gitignored, downloaded from Sheet in CI]
 - README.md                          — project overview (English)
 - convert_addresses.py               — Step 1: expands ranges, respects Oldal, produces address_list.csv
-- address_list.csv                   — expanded address list
-- geocode.py                         — Step 2: reads address_list.csv, geocodes via Google API, produces cache
+- geocode.py                         — Step 2: reads address_list.csv, prunes stale cache entries, geocodes new addresses
 - geocoded_cache.json                — persistent geocoding cache (committed for CI persistence)
 - generate_map.py                    — Step 3: reads cache, produces index.html
 - index.html                         — output map (created by generate_map.py)

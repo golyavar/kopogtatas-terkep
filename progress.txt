@@ -285,11 +285,14 @@ The project is complete and running. Possible future improvements:
 
 ## Changelog
 
-### 2026-03-04 — Stale cache pruning
+### 2026-03-04 — Stale cache pruning & repo cleanup
 - **FIX**: geocode.py now removes cached entries that are no longer in address_list.csv.
   Previously, if addresses were deleted from the Google Sheet (or ranges reduced),
   their pins stayed on the map forever because the cache only grew. Now stale entries
   are pruned at the start of each run (pure set comparison, no API calls, zero extra runtime).
+- **REMOVED**: address_list.csv from the repo. It's a temporary intermediate file generated
+  fresh each CI run by convert_addresses.py and was never committed back — the copy in
+  the repo was stale and misleading.
 
 ### 2026-03-04 — README & code cleanup
 - **CHANGED**: README.md rewritten from Hungarian to English
@@ -399,8 +402,7 @@ The project is complete and running. Possible future improvements:
 - input.csv                          — source address data (Dombóvár only) [gitignored, downloaded from Sheet in CI]
 - README.md                          — project overview (English)
 - convert_addresses.py               — Step 1: expand ranges + Oldal filter → address_list.csv
-- address_list.csv                   — 618 expanded addresses
-- geocode.py                         — Step 2: read address_list.csv → geocode → geocoded_cache.json
+- geocode.py                         — Step 2: read address_list.csv → prune stale entries → geocode → geocoded_cache.json
 - geocoded_cache.json                — persistent geocoding cache (committed for CI persistence)
 - generate_map.py                    — Step 3: read cache → index.html
 - index.html                         — output map (created by generate_map.py)
