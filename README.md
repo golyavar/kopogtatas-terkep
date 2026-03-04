@@ -1,4 +1,4 @@
-# Knocking Map (Kopogtatás térkép)
+# Kopogtatás térkép (Knocking Map)
 
 Interactive map showing door-to-door canvassing addresses in Dombóvár, Hungary. Auto-updates from a Google Sheet via GitHub Actions.
 
