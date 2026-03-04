@@ -264,7 +264,11 @@ Google Sheet edit → Apps Script onChange → GitHub webhook → Actions pipeli
 
 ### NEXT STEPS FOR NEW AGENT
 The project is complete and running. Possible future improvements:
-1. **API key restriction** — Restrict the Google Maps API key to `golyavar.github.io` in Google Cloud Console (security hardening, not required for functionality)
+1. **Rename Házszámok column** — User wants to rename to "Bejárt házszámok" in the Google Sheet.
+   Requires updating one line in convert_addresses.py (line 133: `row.get("Házszámok"` → `row.get("Bejárt házszámok"`).
+   Do this during off-hours since the live site is in use by the team. Rename the Sheet column
+   and deploy the code change at the same time.
+2. **API key restriction** — Restrict the Google Maps API key to `golyavar.github.io` in Google Cloud Console (security hardening, not required for functionality)
 2. **Map improvements** — Search, filtering by city, color-coding by Oldal. Note: MarkerClusterer
    was tested and rejected (user prefers seeing individual house coverage). Heatmap was also
    tested and rejected (looked like density, not individual coverage).
