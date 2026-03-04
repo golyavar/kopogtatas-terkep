@@ -94,20 +94,24 @@ def sort_key(row):
     """Sort by Település, then Utca (with Roman numerals as numbers), then Házszám numerically."""
     utca = row["Utca"]
 
-    # Separate Roman numeral handling from Hungarian letter sorting.
-    # Roman numeral streets sort before alphabetical streets (tuple prefix 0 vs 1).
-    m = re.match(r'^([IVXLCDM]+)\.\s*(.*)', utca)
-    if m:
-        # Prefix pattern: "III. utca" → sort by numeric value, then suffix
-        utca_key = (0, roman_to_int(m.group(1)), hungarian_sort_key(m.group(2) or ''))
+    # Sort order: digit-prefixed (-1) < Roman numeral (0) < alphabetical (1)
+    digit_m = re.match(r'^(\d+)(.*)', utca)
+    if digit_m:
+        # "56-os forradalom tere" → sort by leading number, then suffix
+        utca_key = (-1, int(digit_m.group(1)), hungarian_sort_key(digit_m.group(2).strip()))
     else:
-        m2 = re.search(r'\b([IVXLCDM]+)\.$', utca)
-        if m2:
-            # Suffix pattern: "Pincesor III." → sort by prefix, then numeric value
-            prefix = utca[:m2.start()].strip()
-            utca_key = (1, hungarian_sort_key(prefix), roman_to_int(m2.group(1)))
+        m = re.match(r'^([IVXLCDM]+)\.\s*(.*)', utca)
+        if m:
+            # Prefix pattern: "III. utca" → sort by numeric value, then suffix
+            utca_key = (0, roman_to_int(m.group(1)), hungarian_sort_key(m.group(2) or ''))
         else:
-            utca_key = (1, hungarian_sort_key(utca), 0)
+            m2 = re.search(r'\b([IVXLCDM]+)\.$', utca)
+            if m2:
+                # Suffix pattern: "Pincesor III." → sort by prefix, then numeric value
+                prefix = utca[:m2.start()].strip()
+                utca_key = (1, hungarian_sort_key(prefix), roman_to_int(m2.group(1)))
+            else:
+                utca_key = (1, hungarian_sort_key(utca), 0)
 
     # Sort house number numerically (non-numeric like "2A" sorts after pure numbers)
     házszám = row["Házszám"]
