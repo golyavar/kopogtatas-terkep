@@ -159,7 +159,7 @@ Rows with empty Házszámok are skipped (these are streets without specific hous
 ## Map (index.html) spec
 - Library: Google Maps JavaScript API (loaded from CDN)
 - Map ID: kopogtat_s_t_rk_p (custom styled map)
-- Custom house icon (SVG path, dark blue #1a237e, scale 0.5)
+- Custom house icon (SVG path, dark blue #1a237e, scale 0.5, optimized: true for canvas rendering)
 - Geocoding API: Google Geocoding API (build-time only)
 - Pin popup content: full address (Megjegyzés not shown for now)
 - All pin data embedded as a JS array in the HTML (no runtime geocoding calls)

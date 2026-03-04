@@ -90,7 +90,7 @@ Columns: Település (city), Utca (street), Oldal (side: páratlan=odd / páros=
 
 - Library: Google Maps JavaScript API (loaded from CDN)
 - Map ID: kopogtat_s_t_rk_p (custom styled map)
-- Custom house icon (SVG path, dark blue #1a237e)
+- Custom house icon (SVG path, dark blue #1a237e, optimized: true for canvas rendering)
 - Geocoding API: Google Geocoding API (called only at build time)
   - API key stored in .env locally, in GitHub repo secrets for CI
 - View: fitted to Dombóvár bounding box (46.370–46.389°N, 18.121–18.166°E)
@@ -265,7 +265,9 @@ Google Sheet edit → Apps Script onChange → GitHub webhook → Actions pipeli
 ### NEXT STEPS FOR NEW AGENT
 The project is complete and running. Possible future improvements:
 1. **API key restriction** — Restrict the Google Maps API key to `golyavar.github.io` in Google Cloud Console (security hardening, not required for functionality)
-2. **Map improvements** — Clustering, search, filtering by city, color-coding by Oldal
+2. **Map improvements** — Search, filtering by city, color-coding by Oldal. Note: MarkerClusterer
+   was tested and rejected (user prefers seeing individual house coverage). Heatmap was also
+   tested and rejected (looked like density, not individual coverage).
 3. **Megjegyzés (notes) column** — Currently not shown in pin popups; could be added
 4. **Error monitoring** — The onChange trigger fires on every edit, even non-data edits; could add debouncing or change detection
 5. **Multiple sheets** — If the Google Sheet has multiple tabs, the CSV export only gets the first one
@@ -273,6 +275,21 @@ The project is complete and running. Possible future improvements:
 ---
 
 ## Changelog
+
+### 2026-03-04 — Mobile performance: optimized markers
+- **INVESTIGATED**: Mobile zoom/scroll lag with 1162 markers. Tested 3 approaches:
+  1. **Heatmap** (`google.maps.visualization.HeatmapLayer`) — single canvas, very fast,
+     shows coverage as colored blobs. User rejected: wanted individual house coverage look,
+     not density visualization.
+  2. **Optimized markers** (`optimized: true` on `google.maps.Marker`) — renders all markers
+     on a single shared canvas instead of 1162 individual DOM elements. Smooth on mobile.
+  3. **Hybrid** (heatmap at low zoom, markers at zoom ≥16) — tested but not needed since
+     optimized markers alone were sufficient.
+- **CHOSEN**: `optimized: true` — one-line change, renders markers on canvas layer.
+- **NOTE**: `optimized: true` disables some marker features (e.g. markers can't be dragged,
+  no CSS animations), but none of those are used in this project.
+- **NOT USED**: MarkerClusterer was considered but user didn't want numbered cluster blobs —
+  wanted the map to show coverage of individual houses.
 
 ### 2026-03-04 — Data cleanup & sorting fix
 - **DONE**: Filtered Google Sheet to Dombóvár addresses only (removed all other cities)
