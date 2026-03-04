@@ -1,8 +1,4 @@
 {
-  "II. utca 33, Dombóvár, Hungary": {
-    "lat": 46.3810647,
-    "lon": 18.1509141
-  },
   "II. utca 35, Dombóvár, Hungary": {
     "lat": 46.3825985,
     "lon": 18.1503125
@@ -266,10 +262,6 @@
   "III. utca 68, Dombóvár, Hungary": {
     "lat": 46.3854053,
     "lon": 18.1525538
-  },
-  "IV. utca 35, Dombóvár, Hungary": {
-    "lat": 46.3819096,
-    "lon": 18.1562009
   },
   "IV. utca 37, Dombóvár, Hungary": {
     "lat": 46.3836995,
