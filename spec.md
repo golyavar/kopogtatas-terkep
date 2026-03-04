@@ -20,7 +20,8 @@ Build and test the full pipeline locally using input.csv as the data source.
 - Output includes Oldal column (páratlan/páros) carried over from input
 - Output sorted by Település → Utca → Oldal (páratlan first) → Házszám (numerically)
 - Sorting respects Hungarian alphabet (Á after A, É after E, digraphs CS/SZ/GY etc.)
-- Roman numeral street names (e.g. "III. utca") sort numerically before alphabetical streets
+- Digit-prefixed street names (e.g. "56-os forradalom tere") sort numerically before all others
+- Roman numeral street names (e.g. "III. utca") sort numerically after digit-prefixed, before alphabetical streets
 
 Input:  input.csv
 Output: address_list.csv (the expanded address list — becomes a Google Sheet in Phase 2)
@@ -130,7 +131,7 @@ for all editors, not just the script owner. Set up via Apps Script → Triggers 
 ## Data
 
 ### input.csv columns
-- Település — city (e.g. Dombóvár, Alsónána), all in Hungary
+- Település — city (Dombóvár only — other cities were removed from the source sheet)
 - Utca — street name
 - Oldal — side of street (páros = even, páratlan = odd)
 - Házszámok — house numbers; may be ranges like "1-13, 17" or empty (skip if empty)
@@ -143,7 +144,6 @@ The Oldal column filters which numbers are kept:
 - páros → only even house numbers from ranges
 - Non-numeric entries (e.g. "2A") are always kept regardless of Oldal.
 Full address string format: "{Utca} {Házszám}, {Település}, Hungary"
-~1,906 input rows (55 with house numbers) → **618 unique addresses** after expansion.
 Rows with empty Házszámok are skipped (these are streets without specific house data).
 
 ### geocoded_cache.json format
@@ -159,7 +159,7 @@ Rows with empty Házszámok are skipped (these are streets without specific hous
 ## Map (index.html) spec
 - Library: Google Maps JavaScript API (loaded from CDN)
 - Map ID: kopogtat_s_t_rk_p (custom styled map)
-- Custom house icon (SVG path, dark blue #1a237e)
+- Custom house icon (SVG path, dark blue #1a237e, scale 0.5)
 - Geocoding API: Google Geocoding API (build-time only)
 - Pin popup content: full address (Megjegyzés not shown for now)
 - All pin data embedded as a JS array in the HTML (no runtime geocoding calls)

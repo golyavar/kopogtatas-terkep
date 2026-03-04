@@ -62,7 +62,7 @@ def main():
         fillOpacity: 1,
         strokeColor: '#0d1442',
         strokeWeight: 1,
-        scale: 0.6,
+        scale: 0.5,
         anchor: new google.maps.Point(12, 22),
       }};
 

@@ -54,10 +54,8 @@ Columns: Település (city), Utca (street), Oldal (side: páratlan=odd / páros=
          Házszámok (house numbers — may be ranges like "1-13, 17" or empty),
          Megjegyzés (notes — currently all empty)
 
-- 1,906 total rows across 58 cities in Tolna county (Hungary)
-- Only 55 rows have house numbers; the other 1,851 are streets without specific
-  house data and are intentionally skipped
-- Cities include: Dombóvár (primary), Bonyhád, Hőgyész, Zomba, Alsónána, and 53 others
+- Dombóvár only (other cities were removed from the source Google Sheet in March 2026)
+- Rows without house numbers are streets without specific house data — intentionally skipped
 
 ### Address expansion (convert_addresses.py)
 - Ranges like "1-13" are expanded to individual house numbers
@@ -68,7 +66,8 @@ Columns: Település (city), Utca (street), Oldal (side: páratlan=odd / páros=
 - Output: address_list.csv with 618 unique addresses
 - Columns: Település, Utca, Oldal, Házszám, Teljes cím, Megjegyzés
 - Sorted: Település → Utca → Oldal (páratlan first) → Házszám (numerically)
-- Roman numeral streets (e.g. "III. utca") sort by numeric value, before alphabetical streets
+- Digit-prefixed streets (e.g. "56-os forradalom tere") sort numerically before all others
+- Roman numeral streets (e.g. "III. utca") sort by numeric value, after digit-prefixed, before alphabetical
 - Hungarian alphabetical order: Á after A (not after Z), É after E, Ö/Ő after O, Ü/Ű after U
 - Digraphs (CS, DZ, DZS, GY, LY, NY, SZ, TY, ZS) treated as single letters per Hungarian rules
 - This CSV will become a user-viewable Google Sheet in Phase 2
@@ -264,15 +263,7 @@ changes by other users. For those, use an **installable** onChange trigger
 Google Sheet edit → Apps Script onChange → GitHub webhook → Actions pipeline → commit → GitHub Pages auto-deploy.
 
 ### NEXT STEPS FOR NEW AGENT
-The project is complete and running. Priority task and possible future improvements:
-
-**PRIORITY: Reorganize source Google Sheet**
-- Filter the source sheet to only contain Dombóvár addresses (remove other cities)
-- Sort the sheet using the same logic as `convert_addresses.py`: Roman numeral street names sort numerically (I < II < III...), Hungarian alphabetical order (Á after A, É after E, digraphs CS/SZ/GY as single letters)
-- This means writing a script or extending the pipeline to sort and update the Google Sheet itself
-- Sheet URL: https://docs.google.com/spreadsheets/d/1N6Pv3u-4E8ZwFY6aySRjl4i0qtVu5IAgLrHLxN1Hww4/edit?gid=1244607183#gid=1244607183
-
-Other improvements:
+The project is complete and running. Possible future improvements:
 1. **API key restriction** — Restrict the Google Maps API key to `golyavar.github.io` in Google Cloud Console (security hardening, not required for functionality)
 2. **Map improvements** — Clustering, search, filtering by city, color-coding by Oldal
 3. **Megjegyzés (notes) column** — Currently not shown in pin popups; could be added
@@ -282,6 +273,14 @@ Other improvements:
 ---
 
 ## Changelog
+
+### 2026-03-04 — Data cleanup & sorting fix
+- **DONE**: Filtered Google Sheet to Dombóvár addresses only (removed all other cities)
+- **DONE**: Sorted Google Sheet with Hungarian alphabetical order + roman numeral handling
+- **FIX**: Digit-prefixed street names (e.g. "56-os forradalom tere") now sort before
+  roman numeral and alphabetical streets (sort group -1 < 0 < 1)
+- **CHANGED**: House icon scale reduced from 0.7 to 0.5 in generate_map.py
+- **CLEANUP**: Removed unused local files (input.csv, temp reformat scripts)
 
 ### 2026-02-27 — Opus review & bug fixes
 - **BUG FIX (critical)**: Oldal column was completely ignored during range expansion.
@@ -357,7 +356,7 @@ Other improvements:
 ---
 
 ## Files in this repo
-- input.csv                          — source address data (1,906 rows, 58 cities) [gitignored]
+- input.csv                          — source address data (Dombóvár only) [gitignored, downloaded from Sheet in CI]
 - convert_addresses.py               — Step 1: expand ranges + Oldal filter → address_list.csv
 - address_list.csv                   — 618 expanded addresses
 - geocode.py                         — Step 2: read address_list.csv → geocode → geocoded_cache.json
