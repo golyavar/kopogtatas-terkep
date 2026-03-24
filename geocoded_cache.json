@@ -7942,5 +7942,41 @@
   "Kosztolányi utca 40, Dombóvár, Hungary": {
     "lat": 46.3818731,
     "lon": 18.1559875
+  },
+  "Eötvös utca 1, Dombóvár, Hungary": {
+    "lat": 46.3820577,
+    "lon": 18.1564841
+  },
+  "Eötvös utca 3, Dombóvár, Hungary": {
+    "lat": 46.382093,
+    "lon": 18.1570084
+  },
+  "Eötvös utca 5, Dombóvár, Hungary": {
+    "lat": 46.3821301,
+    "lon": 18.1572117
+  },
+  "Eötvös utca 7, Dombóvár, Hungary": {
+    "lat": 46.3821552,
+    "lon": 18.1574312
+  },
+  "Eötvös utca 9, Dombóvár, Hungary": {
+    "lat": 46.3821913,
+    "lon": 18.1576529
+  },
+  "Eötvös utca 11, Dombóvár, Hungary": {
+    "lat": 46.3822519,
+    "lon": 18.1578408
+  },
+  "Eötvös utca 13, Dombóvár, Hungary": {
+    "lat": 46.38236089999999,
+    "lon": 18.1584663
+  },
+  "Eötvös utca 15, Dombóvár, Hungary": {
+    "lat": 46.3823277,
+    "lon": 18.1582871
+  },
+  "Eötvös utca 17, Dombóvár, Hungary": {
+    "lat": 46.3823722,
+    "lon": 18.1585303
   }
 }
