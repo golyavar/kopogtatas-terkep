@@ -6590,5 +6590,81 @@
   "II. utca 32, Dombóvár, Hungary": {
     "lat": 46.38090099999999,
     "lon": 18.1514956
+  },
+  "Béke utca 1, Dombóvár, Hungary": {
+    "lat": 46.3778708,
+    "lon": 18.1482821
+  },
+  "Béke utca 3, Dombóvár, Hungary": {
+    "lat": 46.378014,
+    "lon": 18.1488969
+  },
+  "Béke utca 5, Dombóvár, Hungary": {
+    "lat": 46.3806655,
+    "lon": 18.1609156
+  },
+  "Béke utca 7, Dombóvár, Hungary": {
+    "lat": 46.3809239,
+    "lon": 18.1612013
+  },
+  "Béke utca 9, Dombóvár, Hungary": {
+    "lat": 46.3810212,
+    "lon": 18.1613751
+  },
+  "Béke utca 11, Dombóvár, Hungary": {
+    "lat": 46.3818324,
+    "lon": 18.1627329
+  },
+  "Béke utca 13, Dombóvár, Hungary": {
+    "lat": 46.3819095,
+    "lon": 18.1629327
+  },
+  "Béke utca 15, Dombóvár, Hungary": {
+    "lat": 46.3820153,
+    "lon": 18.1631199
+  },
+  "Béke utca 17, Dombóvár, Hungary": {
+    "lat": 46.3820935,
+    "lon": 18.1633522
+  },
+  "Béke utca 19, Dombóvár, Hungary": {
+    "lat": 46.3822159,
+    "lon": 18.1635694
+  },
+  "Béke utca 21, Dombóvár, Hungary": {
+    "lat": 46.3824352,
+    "lon": 18.164189
+  },
+  "Béke utca 23, Dombóvár, Hungary": {
+    "lat": 46.3833418,
+    "lon": 18.1656816
+  },
+  "Béke utca 25, Dombóvár, Hungary": {
+    "lat": 46.38346,
+    "lon": 18.1658727
+  },
+  "Béke utca 27, Dombóvár, Hungary": {
+    "lat": 46.3835565,
+    "lon": 18.1660748
+  },
+  "Béke utca 29, Dombóvár, Hungary": {
+    "lat": 46.3838264,
+    "lon": 18.1665767
+  },
+  "Béke utca 2, Dombóvár, Hungary": {
+    "lat": 46.3775904,
+    "lon": 18.1489296
+  },
+  "Béke utca 4, Dombóvár, Hungary": {
+    "lat": 46.3773308,
+    "lon": 18.1490342
+  },
+  "Béke utca 6, Dombóvár, Hungary": {
+    "lat": 46.3775904,
+    "lon": 18.1489296
+  },
+  "Béke utca 8, Dombóvár, Hungary": {
+    "lat": 46.3775904,
+    "lon": 18.1489296
   }
 }
