@@ -7774,5 +7774,173 @@
   "Krúdy Gyula utca 60, Dombóvár, Hungary": {
     "lat": 46.3808398,
     "lon": 18.1528246
+  },
+  "Kosztolányi utca 1, Dombóvár, Hungary": {
+    "lat": 46.3792717,
+    "lon": 18.1557754
+  },
+  "Kosztolányi utca 3, Dombóvár, Hungary": {
+    "lat": 46.3793952,
+    "lon": 18.1556221
+  },
+  "Kosztolányi utca 5, Dombóvár, Hungary": {
+    "lat": 46.3795395,
+    "lon": 18.1555615
+  },
+  "Kosztolányi utca 7, Dombóvár, Hungary": {
+    "lat": 46.3796826,
+    "lon": 18.1555128
+  },
+  "Kosztolányi utca 9, Dombóvár, Hungary": {
+    "lat": 46.3798252,
+    "lon": 18.1554857
+  },
+  "Kosztolányi utca 11, Dombóvár, Hungary": {
+    "lat": 46.38010509999999,
+    "lon": 18.1554152
+  },
+  "Kosztolányi utca 13, Dombóvár, Hungary": {
+    "lat": 46.38023980000001,
+    "lon": 18.15518
+  },
+  "Kosztolányi utca 15, Dombóvár, Hungary": {
+    "lat": 46.3802477,
+    "lon": 18.1553837
+  },
+  "Kosztolányi utca 17, Dombóvár, Hungary": {
+    "lat": 46.3803807,
+    "lon": 18.1553145
+  },
+  "Kosztolányi utca 19, Dombóvár, Hungary": {
+    "lat": 46.3806318,
+    "lon": 18.1552683
+  },
+  "Kosztolányi utca 21, Dombóvár, Hungary": {
+    "lat": 46.3808429,
+    "lon": 18.155204
+  },
+  "Kosztolányi utca 23, Dombóvár, Hungary": {
+    "lat": 46.3809175,
+    "lon": 18.1551601
+  },
+  "Kosztolányi utca 25, Dombóvár, Hungary": {
+    "lat": 46.3811211,
+    "lon": 18.1550948
+  },
+  "Kosztolányi utca 27, Dombóvár, Hungary": {
+    "lat": 46.3811864,
+    "lon": 18.1550613
+  },
+  "Kosztolányi utca 29, Dombóvár, Hungary": {
+    "lat": 46.3812206,
+    "lon": 18.1550483
+  },
+  "Kosztolányi utca 31, Dombóvár, Hungary": {
+    "lat": 46.3814892,
+    "lon": 18.1548728
+  },
+  "Kosztolányi utca 33, Dombóvár, Hungary": {
+    "lat": 46.3815305,
+    "lon": 18.1548578
+  },
+  "Kosztolányi utca 35, Dombóvár, Hungary": {
+    "lat": 46.3819118,
+    "lon": 18.1548601
+  },
+  "Kosztolányi utca 37, Dombóvár, Hungary": {
+    "lat": 46.3821664,
+    "lon": 18.1552158
+  },
+  "Kosztolányi utca 39, Dombóvár, Hungary": {
+    "lat": 46.382069,
+    "lon": 18.1553639
+  },
+  "Kosztolányi utca 41, Dombóvár, Hungary": {
+    "lat": 46.3806725,
+    "lon": 18.1552531
+  },
+  "Kosztolányi utca 43, Dombóvár, Hungary": {
+    "lat": 46.3807132,
+    "lon": 18.1552379
+  },
+  "Kosztolányi utca 2, Dombóvár, Hungary": {
+    "lat": 46.3794866,
+    "lon": 18.1562128
+  },
+  "Kosztolányi utca 4, Dombóvár, Hungary": {
+    "lat": 46.3797015,
+    "lon": 18.156051
+  },
+  "Kosztolányi utca 6, Dombóvár, Hungary": {
+    "lat": 46.3796422,
+    "lon": 18.1561483
+  },
+  "Kosztolányi utca 8, Dombóvár, Hungary": {
+    "lat": 46.3797734,
+    "lon": 18.1560874
+  },
+  "Kosztolányi utca 10, Dombóvár, Hungary": {
+    "lat": 46.380168,
+    "lon": 18.1559386
+  },
+  "Kosztolányi utca 12, Dombóvár, Hungary": {
+    "lat": 46.37935390000001,
+    "lon": 18.1562239
+  },
+  "Kosztolányi utca 14, Dombóvár, Hungary": {
+    "lat": 46.3802154,
+    "lon": 18.1559181
+  },
+  "Kosztolányi utca 16, Dombóvár, Hungary": {
+    "lat": 46.3805908,
+    "lon": 18.155797
+  },
+  "Kosztolányi utca 18, Dombóvár, Hungary": {
+    "lat": 46.380482,
+    "lon": 18.1558344
+  },
+  "Kosztolányi utca 20, Dombóvár, Hungary": {
+    "lat": 46.3806368,
+    "lon": 18.1557799
+  },
+  "Kosztolányi utca 22, Dombóvár, Hungary": {
+    "lat": 46.3810057,
+    "lon": 18.1556278
+  },
+  "Kosztolányi utca 24, Dombóvár, Hungary": {
+    "lat": 46.3808866,
+    "lon": 18.155681
+  },
+  "Kosztolányi utca 26, Dombóvár, Hungary": {
+    "lat": 46.3812641,
+    "lon": 18.1554949
+  },
+  "Kosztolányi utca 28, Dombóvár, Hungary": {
+    "lat": 46.3816406,
+    "lon": 18.1554244
+  },
+  "Kosztolányi utca 30, Dombóvár, Hungary": {
+    "lat": 46.381334,
+    "lon": 18.15547
+  },
+  "Kosztolányi utca 32, Dombóvár, Hungary": {
+    "lat": 46.3814039,
+    "lon": 18.1554451
+  },
+  "Kosztolányi utca 34, Dombóvár, Hungary": {
+    "lat": 46.3817502,
+    "lon": 18.1553798
+  },
+  "Kosztolányi utca 36, Dombóvár, Hungary": {
+    "lat": 46.3817853,
+    "lon": 18.1555867
+  },
+  "Kosztolányi utca 38, Dombóvár, Hungary": {
+    "lat": 46.3818347,
+    "lon": 18.1557882
+  },
+  "Kosztolányi utca 40, Dombóvár, Hungary": {
+    "lat": 46.3818731,
+    "lon": 18.1559875
   }
 }
