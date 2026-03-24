@@ -6666,5 +6666,277 @@
   "Béke utca 8, Dombóvár, Hungary": {
     "lat": 46.3775904,
     "lon": 18.1489296
+  },
+  "Fő utca 2, Dombóvár, Hungary": {
+    "lat": 46.3808397,
+    "lon": 18.1470407
+  },
+  "Fő utca 4, Dombóvár, Hungary": {
+    "lat": 46.38087030000001,
+    "lon": 18.147287
+  },
+  "Fő utca 6, Dombóvár, Hungary": {
+    "lat": 46.3808847,
+    "lon": 18.1475679
+  },
+  "Fő utca 8, Dombóvár, Hungary": {
+    "lat": 46.380986,
+    "lon": 18.1478144
+  },
+  "Fő utca 10, Dombóvár, Hungary": {
+    "lat": 46.3809684,
+    "lon": 18.1482095
+  },
+  "Fő utca 12, Dombóvár, Hungary": {
+    "lat": 46.3811107,
+    "lon": 18.1486609
+  },
+  "Fő utca 14, Dombóvár, Hungary": {
+    "lat": 46.3811686,
+    "lon": 18.1488365
+  },
+  "Fő utca 16, Dombóvár, Hungary": {
+    "lat": 46.3812017,
+    "lon": 18.1490305
+  },
+  "Fő utca 18, Dombóvár, Hungary": {
+    "lat": 46.3812278,
+    "lon": 18.1492657
+  },
+  "Fő utca 20, Dombóvár, Hungary": {
+    "lat": 46.3812515,
+    "lon": 18.1495178
+  },
+  "Fő utca 22, Dombóvár, Hungary": {
+    "lat": 46.3812936,
+    "lon": 18.1498078
+  },
+  "Fő utca 24, Dombóvár, Hungary": {
+    "lat": 46.3813678,
+    "lon": 18.1499431
+  },
+  "Fő utca 26, Dombóvár, Hungary": {
+    "lat": 46.3814261,
+    "lon": 18.1502229
+  },
+  "Fő utca 28, Dombóvár, Hungary": {
+    "lat": 46.3814451,
+    "lon": 18.1504853
+  },
+  "Fő utca 30, Dombóvár, Hungary": {
+    "lat": 46.3814745,
+    "lon": 18.1507212
+  },
+  "Fő utca 32, Dombóvár, Hungary": {
+    "lat": 46.38160509999999,
+    "lon": 18.151193
+  },
+  "Fő utca 34, Dombóvár, Hungary": {
+    "lat": 46.3818575,
+    "lon": 18.1526197
+  },
+  "Fő utca 36, Dombóvár, Hungary": {
+    "lat": 46.3816407,
+    "lon": 18.1516274
+  },
+  "Fő utca 38, Dombóvár, Hungary": {
+    "lat": 46.3818018,
+    "lon": 18.1535127
+  },
+  "Fő utca 40, Dombóvár, Hungary": {
+    "lat": 46.3815858,
+    "lon": 18.1514011
+  },
+  "Fő utca 42, Dombóvár, Hungary": {
+    "lat": 46.3817276,
+    "lon": 18.1533164
+  },
+  "Fő utca 44, Dombóvár, Hungary": {
+    "lat": 46.3822367,
+    "lon": 18.154275
+  },
+  "Fő utca 46, Dombóvár, Hungary": {
+    "lat": 46.3821836,
+    "lon": 18.1545507
+  },
+  "Fő utca 48, Dombóvár, Hungary": {
+    "lat": 46.3822436,
+    "lon": 18.154728
+  },
+  "Fő utca 50, Dombóvár, Hungary": {
+    "lat": 46.3822743,
+    "lon": 18.1549356
+  },
+  "Fő utca 52, Dombóvár, Hungary": {
+    "lat": 46.3822978,
+    "lon": 18.155171
+  },
+  "Fő utca 54, Dombóvár, Hungary": {
+    "lat": 46.3823367,
+    "lon": 18.1553636
+  },
+  "Fő utca 56, Dombóvár, Hungary": {
+    "lat": 46.38247579999999,
+    "lon": 18.1557143
+  },
+  "Fő utca 58, Dombóvár, Hungary": {
+    "lat": 46.382397,
+    "lon": 18.1558427
+  },
+  "Fő utca 60, Dombóvár, Hungary": {
+    "lat": 46.3825316,
+    "lon": 18.1563874
+  },
+  "Fő utca 62, Dombóvár, Hungary": {
+    "lat": 46.382566,
+    "lon": 18.156588
+  },
+  "Fő utca 64, Dombóvár, Hungary": {
+    "lat": 46.3826334,
+    "lon": 18.1568584
+  },
+  "Fő utca 66, Dombóvár, Hungary": {
+    "lat": 46.3826362,
+    "lon": 18.1570669
+  },
+  "Fő utca 68, Dombóvár, Hungary": {
+    "lat": 46.3826948,
+    "lon": 18.1573249
+  },
+  "Fő utca 70, Dombóvár, Hungary": {
+    "lat": 46.3826958,
+    "lon": 18.157567
+  },
+  "Fő utca 72, Dombóvár, Hungary": {
+    "lat": 46.3827566,
+    "lon": 18.1577822
+  },
+  "Fő utca 74, Dombóvár, Hungary": {
+    "lat": 46.3828219,
+    "lon": 18.1580235
+  },
+  "Fő utca 76, Dombóvár, Hungary": {
+    "lat": 46.3828372,
+    "lon": 18.1582779
+  },
+  "Fő utca 78, Dombóvár, Hungary": {
+    "lat": 46.38294510000001,
+    "lon": 18.1585675
+  },
+  "Fő utca 80, Dombóvár, Hungary": {
+    "lat": 46.3832568,
+    "lon": 18.1596659
+  },
+  "Fő utca 82, Dombóvár, Hungary": {
+    "lat": 46.383019,
+    "lon": 18.1592111
+  },
+  "Fő utca 84, Dombóvár, Hungary": {
+    "lat": 46.3830649,
+    "lon": 18.1594491
+  },
+  "Fő utca 86, Dombóvár, Hungary": {
+    "lat": 46.3831296,
+    "lon": 18.1597897
+  },
+  "Fő utca 88, Dombóvár, Hungary": {
+    "lat": 46.3831547,
+    "lon": 18.1599241
+  },
+  "Fő utca 90, Dombóvár, Hungary": {
+    "lat": 46.38323020000001,
+    "lon": 18.1601595
+  },
+  "Fő utca 92, Dombóvár, Hungary": {
+    "lat": 46.383292,
+    "lon": 18.1604692
+  },
+  "Fő utca 94, Dombóvár, Hungary": {
+    "lat": 46.3836277,
+    "lon": 18.1623358
+  },
+  "Fő utca 96, Dombóvár, Hungary": {
+    "lat": 46.3836605,
+    "lon": 18.1626506
+  },
+  "Fő utca 98, Dombóvár, Hungary": {
+    "lat": 46.3836564,
+    "lon": 18.1628308
+  },
+  "Fő utca 100, Dombóvár, Hungary": {
+    "lat": 46.3837106,
+    "lon": 18.1629914
+  },
+  "Fő utca 102, Dombóvár, Hungary": {
+    "lat": 46.3837596,
+    "lon": 18.1632401
+  },
+  "Fő utca 104, Dombóvár, Hungary": {
+    "lat": 46.3838131,
+    "lon": 18.1634746
+  },
+  "Fő utca 106, Dombóvár, Hungary": {
+    "lat": 46.38387849999999,
+    "lon": 18.1637886
+  },
+  "Fő utca 108, Dombóvár, Hungary": {
+    "lat": 46.38396480000001,
+    "lon": 18.1642706
+  },
+  "Fő utca 110, Dombóvár, Hungary": {
+    "lat": 46.3839798,
+    "lon": 18.1643988
+  },
+  "Fő utca 112, Dombóvár, Hungary": {
+    "lat": 46.3839709,
+    "lon": 18.164664
+  },
+  "Fő utca 114, Dombóvár, Hungary": {
+    "lat": 46.38404389999999,
+    "lon": 18.1648892
+  },
+  "Fő utca 116, Dombóvár, Hungary": {
+    "lat": 46.384097,
+    "lon": 18.1651297
+  },
+  "Fő utca 118, Dombóvár, Hungary": {
+    "lat": 46.3841462,
+    "lon": 18.1653588
+  },
+  "Fő utca 120, Dombóvár, Hungary": {
+    "lat": 46.384221,
+    "lon": 18.1655979
+  },
+  "Fő utca 122, Dombóvár, Hungary": {
+    "lat": 46.3842261,
+    "lon": 18.165826
+  },
+  "Fő utca 124, Dombóvár, Hungary": {
+    "lat": 46.3842858,
+    "lon": 18.1660826
+  },
+  "Fő utca 126, Dombóvár, Hungary": {
+    "lat": 46.38435519999999,
+    "lon": 18.1663944
+  },
+  "Fő utca 128, Dombóvár, Hungary": {
+    "lat": 46.3844316,
+    "lon": 18.1668323
+  },
+  "Fő utca 130, Dombóvár, Hungary": {
+    "lat": 46.384504,
+    "lon": 18.1672592
+  },
+  "Fő utca 132, Dombóvár, Hungary": {
+    "lat": 46.38454790000001,
+    "lon": 18.167458
+  },
+  "Fő utca 134, Dombóvár, Hungary": {
+    "lat": 46.3845584,
+    "lon": 18.1675171
+  },
+  "Fő utca 136, Dombóvár, Hungary": {
+    "lat": 46.3845976,
+    "lon": 18.1678694
   }
 }
