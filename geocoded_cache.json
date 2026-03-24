@@ -6458,5 +6458,73 @@
   "I. utca 36, Dombóvár, Hungary": {
     "lat": 46.3807547,
     "lon": 18.1487404
+  },
+  "II. utca 1, Dombóvár, Hungary": {
+    "lat": 46.3787289,
+    "lon": 18.1517848
+  },
+  "II. utca 3, Dombóvár, Hungary": {
+    "lat": 46.378858,
+    "lon": 18.1517236
+  },
+  "II. utca 5, Dombóvár, Hungary": {
+    "lat": 46.37900639999999,
+    "lon": 18.1517019
+  },
+  "II. utca 7, Dombóvár, Hungary": {
+    "lat": 46.3790525,
+    "lon": 18.1516864
+  },
+  "II. utca 9, Dombóvár, Hungary": {
+    "lat": 46.3791784,
+    "lon": 18.1516281
+  },
+  "II. utca 11, Dombóvár, Hungary": {
+    "lat": 46.3793295,
+    "lon": 18.1515508
+  },
+  "II. utca 13, Dombóvár, Hungary": {
+    "lat": 46.3794788,
+    "lon": 18.1515358
+  },
+  "II. utca 15, Dombóvár, Hungary": {
+    "lat": 46.37960469999999,
+    "lon": 18.1514135
+  },
+  "II. utca 17, Dombóvár, Hungary": {
+    "lat": 46.3797563,
+    "lon": 18.1514468
+  },
+  "II. utca 19, Dombóvár, Hungary": {
+    "lat": 46.3798851,
+    "lon": 18.1513396
+  },
+  "II. utca 21, Dombóvár, Hungary": {
+    "lat": 46.3799315,
+    "lon": 18.1513215
+  },
+  "II. utca 23, Dombóvár, Hungary": {
+    "lat": 46.3802167,
+    "lon": 18.1512489
+  },
+  "II. utca 25, Dombóvár, Hungary": {
+    "lat": 46.3803548,
+    "lon": 18.1511558
+  },
+  "II. utca 27, Dombóvár, Hungary": {
+    "lat": 46.3805088,
+    "lon": 18.1511435
+  },
+  "II. utca 29, Dombóvár, Hungary": {
+    "lat": 46.3806412,
+    "lon": 18.1509892
+  },
+  "II. utca 31, Dombóvár, Hungary": {
+    "lat": 46.3808107,
+    "lon": 18.1509924
+  },
+  "II. utca 33, Dombóvár, Hungary": {
+    "lat": 46.3810647,
+    "lon": 18.1509141
   }
 }
