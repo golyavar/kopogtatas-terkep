@@ -7218,5 +7218,33 @@
   "IV. utca 36, Dombóvár, Hungary": {
     "lat": 46.3822821,
     "lon": 18.1565002
+  },
+  "VII. utca 1, Dombóvár, Hungary": {
+    "lat": 46.3825764,
+    "lon": 18.1642514
+  },
+  "VII. utca 3, Dombóvár, Hungary": {
+    "lat": 46.38273150000001,
+    "lon": 18.1642129
+  },
+  "VII. utca 5, Dombóvár, Hungary": {
+    "lat": 46.3828584,
+    "lon": 18.1640764
+  },
+  "VII. utca 7, Dombóvár, Hungary": {
+    "lat": 46.3830002,
+    "lon": 18.1640226
+  },
+  "VII. utca 9, Dombóvár, Hungary": {
+    "lat": 46.3831347,
+    "lon": 18.1639899
+  },
+  "VII. utca 2, Dombóvár, Hungary": {
+    "lat": 46.3829667,
+    "lon": 18.1646279
+  },
+  "VII. utca 4, Dombóvár, Hungary": {
+    "lat": 46.3832586,
+    "lon": 18.1644959
   }
 }
