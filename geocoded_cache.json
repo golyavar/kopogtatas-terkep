@@ -7246,5 +7246,13 @@
   "VII. utca 4, Dombóvár, Hungary": {
     "lat": 46.3832586,
     "lon": 18.1644959
+  },
+  "VIII. utca 1, Dombóvár, Hungary": {
+    "lat": 46.38444,
+    "lon": 18.1667661
+  },
+  "VIII. utca 2, Dombóvár, Hungary": {
+    "lat": 46.3842879,
+    "lon": 18.1668613
   }
 }
