@@ -7254,5 +7254,41 @@
   "VIII. utca 2, Dombóvár, Hungary": {
     "lat": 46.3842879,
     "lon": 18.1668613
+  },
+  "Vadász utca 1, Dombóvár, Hungary": {
+    "lat": 46.3834087,
+    "lon": 18.164401
+  },
+  "Vadász utca 3, Dombóvár, Hungary": {
+    "lat": 46.3835097,
+    "lon": 18.1646133
+  },
+  "Vadász utca 5, Dombóvár, Hungary": {
+    "lat": 46.38359029999999,
+    "lon": 18.1649272
+  },
+  "Vadász utca 7, Dombóvár, Hungary": {
+    "lat": 46.3836138,
+    "lon": 18.1651717
+  },
+  "Vadász utca 9, Dombóvár, Hungary": {
+    "lat": 46.3836922,
+    "lon": 18.165444
+  },
+  "Vadász utca 2, Dombóvár, Hungary": {
+    "lat": 46.3835293,
+    "lon": 18.165452
+  },
+  "Vadász utca 4, Dombóvár, Hungary": {
+    "lat": 46.3835293,
+    "lon": 18.165452
+  },
+  "Vadász utca 6, Dombóvár, Hungary": {
+    "lat": 46.3835293,
+    "lon": 18.165452
+  },
+  "Vadász utca 8, Dombóvár, Hungary": {
+    "lat": 46.3835293,
+    "lon": 18.165452
   }
 }
