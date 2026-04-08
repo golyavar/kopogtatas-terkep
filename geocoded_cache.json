@@ -8615,106 +8615,6 @@
     "lat": 46.38806049999999,
     "lon": 18.1470994
   },
-  "Lehel sor 3, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 5, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 7, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 9, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 11, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 13, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 15, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 17, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 19, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 21, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 4, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 6, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 8, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 10, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 12, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 14, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 16, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 18, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 20, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 22, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 24, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 26, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 28, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 30, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
-  "Lehel sor 32, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
-  },
   "Kinizsi utca 1, Dombóvár, Hungary": {
     "lat": 46.3699575,
     "lon": 18.1420225
@@ -8879,12 +8779,112 @@
     "lat": 46.3720065,
     "lon": 18.1438584
   },
-  "Lehel sor 1, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
+  "Lehelsor 1, Dombóvár, Hungary": {
+    "lat": 46.3702172,
+    "lon": 18.1429505
   },
-  "Lehel sor 2, Dombóvár, Hungary": {
-    "lat": 46.3828653,
-    "lon": 18.1452879
+  "Lehelsor 3, Dombóvár, Hungary": {
+    "lat": 46.3703935,
+    "lon": 18.1431327
+  },
+  "Lehelsor 5, Dombóvár, Hungary": {
+    "lat": 46.3705056,
+    "lon": 18.1431299
+  },
+  "Lehelsor 7, Dombóvár, Hungary": {
+    "lat": 46.37078289999999,
+    "lon": 18.143159
+  },
+  "Lehelsor 9, Dombóvár, Hungary": {
+    "lat": 46.3709004,
+    "lon": 18.1431145
+  },
+  "Lehelsor 11, Dombóvár, Hungary": {
+    "lat": 46.3710435,
+    "lon": 18.143107
+  },
+  "Lehelsor 13, Dombóvár, Hungary": {
+    "lat": 46.3711771,
+    "lon": 18.1431515
+  },
+  "Lehelsor 15, Dombóvár, Hungary": {
+    "lat": 46.3707978,
+    "lon": 18.1431213
+  },
+  "Lehelsor 17, Dombóvár, Hungary": {
+    "lat": 46.3713579,
+    "lon": 18.1430006
+  },
+  "Lehelsor 19, Dombóvár, Hungary": {
+    "lat": 46.3715498,
+    "lon": 18.1430783
+  },
+  "Lehelsor 21, Dombóvár, Hungary": {
+    "lat": 46.3716787,
+    "lon": 18.1430811
+  },
+  "Lehelsor 2, Dombóvár, Hungary": {
+    "lat": 46.37033779999999,
+    "lon": 18.1431361
+  },
+  "Lehelsor 4, Dombóvár, Hungary": {
+    "lat": 46.3701119,
+    "lon": 18.1427795
+  },
+  "Lehelsor 6, Dombóvár, Hungary": {
+    "lat": 46.3702492,
+    "lon": 18.1427831
+  },
+  "Lehelsor 8, Dombóvár, Hungary": {
+    "lat": 46.370387,
+    "lon": 18.1427105
+  },
+  "Lehelsor 10, Dombóvár, Hungary": {
+    "lat": 46.3705225,
+    "lon": 18.1427621
+  },
+  "Lehelsor 12, Dombóvár, Hungary": {
+    "lat": 46.3706444,
+    "lon": 18.1427771
+  },
+  "Lehelsor 14, Dombóvár, Hungary": {
+    "lat": 46.3707947,
+    "lon": 18.1427511
+  },
+  "Lehelsor 16, Dombóvár, Hungary": {
+    "lat": 46.3709281,
+    "lon": 18.1427036
+  },
+  "Lehelsor 18, Dombóvár, Hungary": {
+    "lat": 46.3710618,
+    "lon": 18.1427497
+  },
+  "Lehelsor 20, Dombóvár, Hungary": {
+    "lat": 46.3712056,
+    "lon": 18.1427724
+  },
+  "Lehelsor 22, Dombóvár, Hungary": {
+    "lat": 46.37131300000001,
+    "lon": 18.1427151
+  },
+  "Lehelsor 24, Dombóvár, Hungary": {
+    "lat": 46.3714403,
+    "lon": 18.1427198
+  },
+  "Lehelsor 26, Dombóvár, Hungary": {
+    "lat": 46.3715651,
+    "lon": 18.1426238
+  },
+  "Lehelsor 28, Dombóvár, Hungary": {
+    "lat": 46.3710799,
+    "lon": 18.1426261
+  },
+  "Lehelsor 30, Dombóvár, Hungary": {
+    "lat": 46.37185179999999,
+    "lon": 18.1426539
+  },
+  "Lehelsor 32, Dombóvár, Hungary": {
+    "lat": 46.37202629999999,
+    "lon": 18.1426442
   }
 }
