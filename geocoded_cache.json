@@ -8862,5 +8862,21 @@
   "Kinizsi utca 38, Dombóvár, Hungary": {
     "lat": 46.3726539,
     "lon": 18.1416312
+  },
+  "Tompa Mihály utca 1, Dombóvár, Hungary": {
+    "lat": 46.3720426,
+    "lon": 18.1430736
+  },
+  "Tompa Mihály utca 3, Dombóvár, Hungary": {
+    "lat": 46.3720619,
+    "lon": 18.1433421
+  },
+  "Tompa Mihály utca 5, Dombóvár, Hungary": {
+    "lat": 46.3720644,
+    "lon": 18.1434042
+  },
+  "Tompa Mihály utca 7, Dombóvár, Hungary": {
+    "lat": 46.3720065,
+    "lon": 18.1438584
   }
 }
