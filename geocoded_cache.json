@@ -8902,5 +8902,585 @@
   "Rákóczi utca 136, Dombóvár, Hungary": {
     "lat": 46.3773776,
     "lon": 18.1191778
+  },
+  "Erzsébet utca 1, Dombóvár, Hungary": {
+    "lat": 46.37041079999999,
+    "lon": 18.1284489
+  },
+  "Erzsébet utca 3, Dombóvár, Hungary": {
+    "lat": 46.3708811,
+    "lon": 18.1279473
+  },
+  "Erzsébet utca 5, Dombóvár, Hungary": {
+    "lat": 46.37070920000001,
+    "lon": 18.1284604
+  },
+  "Erzsébet utca 7, Dombóvár, Hungary": {
+    "lat": 46.37085829999999,
+    "lon": 18.1280923
+  },
+  "Erzsébet utca 9, Dombóvár, Hungary": {
+    "lat": 46.3713121,
+    "lon": 18.1278372
+  },
+  "Erzsébet utca 11, Dombóvár, Hungary": {
+    "lat": 46.3712869,
+    "lon": 18.1275957
+  },
+  "Erzsébet utca 13, Dombóvár, Hungary": {
+    "lat": 46.3713493,
+    "lon": 18.1275373
+  },
+  "Erzsébet utca 15, Dombóvár, Hungary": {
+    "lat": 46.371621,
+    "lon": 18.1272577
+  },
+  "Erzsébet utca 17, Dombóvár, Hungary": {
+    "lat": 46.3716049,
+    "lon": 18.1272313
+  },
+  "Erzsébet utca 19, Dombóvár, Hungary": {
+    "lat": 46.3718205,
+    "lon": 18.1272022
+  },
+  "Erzsébet utca 21, Dombóvár, Hungary": {
+    "lat": 46.37187,
+    "lon": 18.126891
+  },
+  "Erzsébet utca 23, Dombóvár, Hungary": {
+    "lat": 46.3719461,
+    "lon": 18.126785
+  },
+  "Erzsébet utca 25, Dombóvár, Hungary": {
+    "lat": 46.3706051,
+    "lon": 18.1282571
+  },
+  "Erzsébet utca 27, Dombóvár, Hungary": {
+    "lat": 46.3722629,
+    "lon": 18.1264093
+  },
+  "Erzsébet utca 29, Dombóvár, Hungary": {
+    "lat": 46.3722963,
+    "lon": 18.1263691
+  },
+  "Erzsébet utca 31, Dombóvár, Hungary": {
+    "lat": 46.3724948,
+    "lon": 18.1260259
+  },
+  "Erzsébet utca 33, Dombóvár, Hungary": {
+    "lat": 46.372611,
+    "lon": 18.1260489
+  },
+  "Erzsébet utca 35, Dombóvár, Hungary": {
+    "lat": 46.3727911,
+    "lon": 18.1256769
+  },
+  "Erzsébet utca 37, Dombóvár, Hungary": {
+    "lat": 46.3730665,
+    "lon": 18.1255561
+  },
+  "Erzsébet utca 39, Dombóvár, Hungary": {
+    "lat": 46.372921,
+    "lon": 18.125599
+  },
+  "Erzsébet utca 41, Dombóvár, Hungary": {
+    "lat": 46.3730943,
+    "lon": 18.1255231
+  },
+  "Erzsébet utca 43, Dombóvár, Hungary": {
+    "lat": 46.3732571,
+    "lon": 18.1255217
+  },
+  "Erzsébet utca 45, Dombóvár, Hungary": {
+    "lat": 46.3734595,
+    "lon": 18.1252286
+  },
+  "Erzsébet utca 47, Dombóvár, Hungary": {
+    "lat": 46.373645,
+    "lon": 18.124924
+  },
+  "Erzsébet utca 49, Dombóvár, Hungary": {
+    "lat": 46.3737083,
+    "lon": 18.1248836
+  },
+  "Erzsébet utca 51, Dombóvár, Hungary": {
+    "lat": 46.37364179999999,
+    "lon": 18.1249251
+  },
+  "Erzsébet utca 53, Dombóvár, Hungary": {
+    "lat": 46.37411119999999,
+    "lon": 18.1245567
+  },
+  "Erzsébet utca 55, Dombóvár, Hungary": {
+    "lat": 46.3739328,
+    "lon": 18.1246475
+  },
+  "Erzsébet utca 57, Dombóvár, Hungary": {
+    "lat": 46.3741376,
+    "lon": 18.1245247
+  },
+  "Erzsébet utca 59, Dombóvár, Hungary": {
+    "lat": 46.374314,
+    "lon": 18.124237
+  },
+  "Erzsébet utca 61, Dombóvár, Hungary": {
+    "lat": 46.3742975,
+    "lon": 18.1242307
+  },
+  "Erzsébet utca 63, Dombóvár, Hungary": {
+    "lat": 46.3744474,
+    "lon": 18.1242088
+  },
+  "Erzsébet utca 65, Dombóvár, Hungary": {
+    "lat": 46.3745103,
+    "lon": 18.1240838
+  },
+  "Erzsébet utca 67, Dombóvár, Hungary": {
+    "lat": 46.3746592,
+    "lon": 18.1240741
+  },
+  "Erzsébet utca 69, Dombóvár, Hungary": {
+    "lat": 46.3747193,
+    "lon": 18.1239376
+  },
+  "Erzsébet utca 71, Dombóvár, Hungary": {
+    "lat": 46.3748128,
+    "lon": 18.1238573
+  },
+  "Erzsébet utca 73, Dombóvár, Hungary": {
+    "lat": 46.3751087,
+    "lon": 18.1234876
+  },
+  "Erzsébet utca 75, Dombóvár, Hungary": {
+    "lat": 46.375196,
+    "lon": 18.1233814
+  },
+  "Erzsébet utca 77, Dombóvár, Hungary": {
+    "lat": 46.3753935,
+    "lon": 18.1234011
+  },
+  "Erzsébet utca 79, Dombóvár, Hungary": {
+    "lat": 46.375611,
+    "lon": 18.1229081
+  },
+  "Erzsébet utca 81, Dombóvár, Hungary": {
+    "lat": 46.3758451,
+    "lon": 18.1228191
+  },
+  "Erzsébet utca 83, Dombóvár, Hungary": {
+    "lat": 46.3759163,
+    "lon": 18.1226611
+  },
+  "Erzsébet utca 85, Dombóvár, Hungary": {
+    "lat": 46.3760385,
+    "lon": 18.1225922
+  },
+  "Erzsébet utca 87, Dombóvár, Hungary": {
+    "lat": 46.3761807,
+    "lon": 18.122481
+  },
+  "Erzsébet utca 89, Dombóvár, Hungary": {
+    "lat": 46.3763033,
+    "lon": 18.1223301
+  },
+  "Erzsébet utca 91, Dombóvár, Hungary": {
+    "lat": 46.3764249,
+    "lon": 18.1220433
+  },
+  "Erzsébet utca 93, Dombóvár, Hungary": {
+    "lat": 46.3764494,
+    "lon": 18.1220116
+  },
+  "Erzsébet utca 95, Dombóvár, Hungary": {
+    "lat": 46.376553,
+    "lon": 18.121872
+  },
+  "Erzsébet utca 97, Dombóvár, Hungary": {
+    "lat": 46.37666,
+    "lon": 18.1217529
+  },
+  "Erzsébet utca 99, Dombóvár, Hungary": {
+    "lat": 46.3767875,
+    "lon": 18.1216458
+  },
+  "Erzsébet utca 101, Dombóvár, Hungary": {
+    "lat": 46.3768989,
+    "lon": 18.1216276
+  },
+  "Erzsébet utca 103, Dombóvár, Hungary": {
+    "lat": 46.3769597,
+    "lon": 18.1215135
+  },
+  "Erzsébet utca 105, Dombóvár, Hungary": {
+    "lat": 46.3770834,
+    "lon": 18.1213707
+  },
+  "Erzsébet utca 107, Dombóvár, Hungary": {
+    "lat": 46.3772748,
+    "lon": 18.121082
+  },
+  "Erzsébet utca 109, Dombóvár, Hungary": {
+    "lat": 46.37746689999999,
+    "lon": 18.1208958
+  },
+  "Erzsébet utca 111, Dombóvár, Hungary": {
+    "lat": 46.3777105,
+    "lon": 18.1207263
+  },
+  "Erzsébet utca 113, Dombóvár, Hungary": {
+    "lat": 46.37783599999999,
+    "lon": 18.120368
+  },
+  "Erzsébet utca 115, Dombóvár, Hungary": {
+    "lat": 46.3779066,
+    "lon": 18.1204977
+  },
+  "Erzsébet utca 117, Dombóvár, Hungary": {
+    "lat": 46.3779066,
+    "lon": 18.1204977
+  },
+  "Erzsébet utca 119, Dombóvár, Hungary": {
+    "lat": 46.3779066,
+    "lon": 18.1204977
+  },
+  "Erzsébet utca 121, Dombóvár, Hungary": {
+    "lat": 46.3779066,
+    "lon": 18.1204977
+  },
+  "Erzsébet utca 123, Dombóvár, Hungary": {
+    "lat": 46.3779066,
+    "lon": 18.1204977
+  },
+  "Erzsébet utca 125, Dombóvár, Hungary": {
+    "lat": 46.3779066,
+    "lon": 18.1204977
+  },
+  "Erzsébet utca 127, Dombóvár, Hungary": {
+    "lat": 46.3779066,
+    "lon": 18.1204977
+  },
+  "Erzsébet utca 129, Dombóvár, Hungary": {
+    "lat": 46.3779066,
+    "lon": 18.1204977
+  },
+  "Erzsébet utca 2, Dombóvár, Hungary": {
+    "lat": 46.3703993,
+    "lon": 18.1272272
+  },
+  "Erzsébet utca 4, Dombóvár, Hungary": {
+    "lat": 46.3706101,
+    "lon": 18.1282982
+  },
+  "Erzsébet utca 6, Dombóvár, Hungary": {
+    "lat": 46.370783,
+    "lon": 18.12817
+  },
+  "Erzsébet utca 8, Dombóvár, Hungary": {
+    "lat": 46.370971,
+    "lon": 18.127985
+  },
+  "Erzsébet utca 10, Dombóvár, Hungary": {
+    "lat": 46.3702506,
+    "lon": 18.1276546
+  },
+  "Erzsébet utca 12, Dombóvár, Hungary": {
+    "lat": 46.3709156,
+    "lon": 18.1274349
+  },
+  "Erzsébet utca 14, Dombóvár, Hungary": {
+    "lat": 46.3713321,
+    "lon": 18.1271354
+  },
+  "Erzsébet utca 16, Dombóvár, Hungary": {
+    "lat": 46.371466,
+    "lon": 18.1270339
+  },
+  "Erzsébet utca 18, Dombóvár, Hungary": {
+    "lat": 46.3715504,
+    "lon": 18.1268585
+  },
+  "Erzsébet utca 20, Dombóvár, Hungary": {
+    "lat": 46.3716523,
+    "lon": 18.1266854
+  },
+  "Erzsébet utca 22, Dombóvár, Hungary": {
+    "lat": 46.3717081,
+    "lon": 18.1264028
+  },
+  "Erzsébet utca 24, Dombóvár, Hungary": {
+    "lat": 46.3719085,
+    "lon": 18.1263961
+  },
+  "Erzsébet utca 26, Dombóvár, Hungary": {
+    "lat": 46.3720603,
+    "lon": 18.126084
+  },
+  "Erzsébet utca 28, Dombóvár, Hungary": {
+    "lat": 46.37213269999999,
+    "lon": 18.1259111
+  },
+  "Erzsébet utca 30, Dombóvár, Hungary": {
+    "lat": 46.3721883,
+    "lon": 18.1259409
+  },
+  "Erzsébet utca 32, Dombóvár, Hungary": {
+    "lat": 46.37237589999999,
+    "lon": 18.1258737
+  },
+  "Erzsébet utca 34, Dombóvár, Hungary": {
+    "lat": 46.3723761,
+    "lon": 18.1257661
+  },
+  "Erzsébet utca 36, Dombóvár, Hungary": {
+    "lat": 46.3724053,
+    "lon": 18.1256749
+  },
+  "Erzsébet utca 38, Dombóvár, Hungary": {
+    "lat": 46.3726049,
+    "lon": 18.1253467
+  },
+  "Erzsébet utca 40, Dombóvár, Hungary": {
+    "lat": 46.37256989999999,
+    "lon": 18.1253686
+  },
+  "Erzsébet utca 42, Dombóvár, Hungary": {
+    "lat": 46.37264,
+    "lon": 18.1251883
+  },
+  "Erzsébet utca 44, Dombóvár, Hungary": {
+    "lat": 46.37279789999999,
+    "lon": 18.1252227
+  },
+  "Erzsébet utca 46, Dombóvár, Hungary": {
+    "lat": 46.3728341,
+    "lon": 18.125168
+  },
+  "Erzsébet utca 48, Dombóvár, Hungary": {
+    "lat": 46.3728668,
+    "lon": 18.125032
+  },
+  "Erzsébet utca 50, Dombóvár, Hungary": {
+    "lat": 46.373025,
+    "lon": 18.125038
+  },
+  "Erzsébet utca 52, Dombóvár, Hungary": {
+    "lat": 46.3730497,
+    "lon": 18.1250345
+  },
+  "Erzsébet utca 54, Dombóvár, Hungary": {
+    "lat": 46.3729751,
+    "lon": 18.1248963
+  },
+  "Erzsébet utca 56, Dombóvár, Hungary": {
+    "lat": 46.3730039,
+    "lon": 18.1247126
+  },
+  "Erzsébet utca 58, Dombóvár, Hungary": {
+    "lat": 46.3730148,
+    "lon": 18.1243613
+  },
+  "Erzsébet utca 60, Dombóvár, Hungary": {
+    "lat": 46.3733225,
+    "lon": 18.1249123
+  },
+  "Erzsébet utca 62, Dombóvár, Hungary": {
+    "lat": 46.3732846,
+    "lon": 18.1249304
+  },
+  "Erzsébet utca 64, Dombóvár, Hungary": {
+    "lat": 46.373471,
+    "lon": 18.124615
+  },
+  "Erzsébet utca 66, Dombóvár, Hungary": {
+    "lat": 46.3734757,
+    "lon": 18.1246694
+  },
+  "Erzsébet utca 68, Dombóvár, Hungary": {
+    "lat": 46.373571,
+    "lon": 18.124556
+  },
+  "Erzsébet utca 70, Dombóvár, Hungary": {
+    "lat": 46.3736302,
+    "lon": 18.1244229
+  },
+  "Erzsébet utca 72, Dombóvár, Hungary": {
+    "lat": 46.3738349,
+    "lon": 18.124263
+  },
+  "Erzsébet utca 74, Dombóvár, Hungary": {
+    "lat": 46.3738596,
+    "lon": 18.1242434
+  },
+  "Erzsébet utca 76, Dombóvár, Hungary": {
+    "lat": 46.3740013,
+    "lon": 18.1241676
+  },
+  "Erzsébet utca 78, Dombóvár, Hungary": {
+    "lat": 46.374037,
+    "lon": 18.1239847
+  },
+  "Erzsébet utca 80, Dombóvár, Hungary": {
+    "lat": 46.3741456,
+    "lon": 18.1239245
+  },
+  "Erzsébet utca 82, Dombóvár, Hungary": {
+    "lat": 46.37433129999999,
+    "lon": 18.1238799
+  },
+  "Erzsébet utca 84, Dombóvár, Hungary": {
+    "lat": 46.3742721,
+    "lon": 18.1237204
+  },
+  "Erzsébet utca 86, Dombóvár, Hungary": {
+    "lat": 46.3744251,
+    "lon": 18.1237047
+  },
+  "Erzsébet utca 88, Dombóvár, Hungary": {
+    "lat": 46.3744546,
+    "lon": 18.1236664
+  },
+  "Erzsébet utca 90, Dombóvár, Hungary": {
+    "lat": 46.3745525,
+    "lon": 18.123555
+  },
+  "Erzsébet utca 92, Dombóvár, Hungary": {
+    "lat": 46.3746141,
+    "lon": 18.1233939
+  },
+  "Erzsébet utca 94, Dombóvár, Hungary": {
+    "lat": 46.3747793,
+    "lon": 18.123314
+  },
+  "Erzsébet utca 96, Dombóvár, Hungary": {
+    "lat": 46.3748446,
+    "lon": 18.1232031
+  },
+  "Erzsébet utca 98, Dombóvár, Hungary": {
+    "lat": 46.3748655,
+    "lon": 18.1231696
+  },
+  "Erzsébet utca 100, Dombóvár, Hungary": {
+    "lat": 46.3750948,
+    "lon": 18.1229259
+  },
+  "Erzsébet utca 102, Dombóvár, Hungary": {
+    "lat": 46.3751813,
+    "lon": 18.1227557
+  },
+  "Erzsébet utca 104, Dombóvár, Hungary": {
+    "lat": 46.3753256,
+    "lon": 18.1226829
+  },
+  "Erzsébet utca 106, Dombóvár, Hungary": {
+    "lat": 46.3754268,
+    "lon": 18.122587
+  },
+  "Erzsébet utca 108, Dombóvár, Hungary": {
+    "lat": 46.37554919999999,
+    "lon": 18.1224466
+  },
+  "Erzsébet utca 110, Dombóvár, Hungary": {
+    "lat": 46.3757044,
+    "lon": 18.1224815
+  },
+  "Erzsébet utca 112, Dombóvár, Hungary": {
+    "lat": 46.375691,
+    "lon": 18.1223839
+  },
+  "Erzsébet utca 114, Dombóvár, Hungary": {
+    "lat": 46.374846,
+    "lon": 18.120016
+  },
+  "Erzsébet utca 116, Dombóvár, Hungary": {
+    "lat": 46.37596,
+    "lon": 18.122019
+  },
+  "Erzsébet utca 118, Dombóvár, Hungary": {
+    "lat": 46.3760426,
+    "lon": 18.1218416
+  },
+  "Erzsébet utca 120, Dombóvár, Hungary": {
+    "lat": 46.3762019,
+    "lon": 18.1218246
+  },
+  "Erzsébet utca 122, Dombóvár, Hungary": {
+    "lat": 46.3762881,
+    "lon": 18.1216498
+  },
+  "Erzsébet utca 124, Dombóvár, Hungary": {
+    "lat": 46.376504,
+    "lon": 18.12143
+  },
+  "Erzsébet utca 126, Dombóvár, Hungary": {
+    "lat": 46.376534,
+    "lon": 18.1214661
+  },
+  "Erzsébet utca 128, Dombóvár, Hungary": {
+    "lat": 46.3767698,
+    "lon": 18.1211517
+  },
+  "Erzsébet utca 130, Dombóvár, Hungary": {
+    "lat": 46.3769572,
+    "lon": 18.1208579
+  },
+  "Erzsébet utca 132, Dombóvár, Hungary": {
+    "lat": 46.377083,
+    "lon": 18.120771
+  },
+  "Erzsébet utca 134, Dombóvár, Hungary": {
+    "lat": 46.377088,
+    "lon": 18.120818
+  },
+  "Erzsébet utca 136, Dombóvár, Hungary": {
+    "lat": 46.3773241,
+    "lon": 18.1205071
+  },
+  "Erzsébet utca 138, Dombóvár, Hungary": {
+    "lat": 46.3774262,
+    "lon": 18.1203527
+  },
+  "Erzsébet utca 140, Dombóvár, Hungary": {
+    "lat": 46.377538,
+    "lon": 18.1201941
+  },
+  "Erzsébet utca 142, Dombóvár, Hungary": {
+    "lat": 46.3777054,
+    "lon": 18.1200305
+  },
+  "Erzsébet utca 144, Dombóvár, Hungary": {
+    "lat": 46.37765659999999,
+    "lon": 18.1199409
+  },
+  "Erzsébet utca 146, Dombóvár, Hungary": {
+    "lat": 46.37765659999999,
+    "lon": 18.1199409
+  },
+  "Erzsébet utca 148, Dombóvár, Hungary": {
+    "lat": 46.37765659999999,
+    "lon": 18.1199409
+  },
+  "Erzsébet utca 150, Dombóvár, Hungary": {
+    "lat": 46.37765659999999,
+    "lon": 18.1199409
+  },
+  "Erzsébet utca 152, Dombóvár, Hungary": {
+    "lat": 46.37765659999999,
+    "lon": 18.1199409
+  },
+  "Erzsébet utca 154, Dombóvár, Hungary": {
+    "lat": 46.37765659999999,
+    "lon": 18.1199409
+  },
+  "Erzsébet utca 156, Dombóvár, Hungary": {
+    "lat": 46.37765659999999,
+    "lon": 18.1199409
+  },
+  "Erzsébet utca 158, Dombóvár, Hungary": {
+    "lat": 46.37765659999999,
+    "lon": 18.1199409
+  },
+  "Erzsébet utca 160, Dombóvár, Hungary": {
+    "lat": 46.37765659999999,
+    "lon": 18.1199409
   }
 }
